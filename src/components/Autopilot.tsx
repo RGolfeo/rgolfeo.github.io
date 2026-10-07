@@ -51,18 +51,18 @@ type FlowNode = {
 // Two tiers: the chain across the top, the outcomes fanning out just below.
 const NODES: FlowNode[] = [
   // top chain
-  { id: 'n-form',     Icon: Lightning,     title: 'Trigger',        subtitle: 'Form submitted',    x: 6,   y: 36,  variant: 'trigger' },
-  { id: 'n-email',    Icon: EnvelopeSimple, title: 'Send Email',    subtitle: 'Action',            x: 176, y: 36 },
-  { id: 'n-booked',   Icon: CalendarCheck, title: 'Update CRM',     subtitle: 'Action',            x: 346, y: 36 },
-  { id: 'n-24hr',     Icon: Clock,         title: 'Wait',           subtitle: 'Delay step',        x: 516, y: 36 },
-  { id: 'n-1hr',      Icon: BellRinging,   title: 'Reminder',       subtitle: 'Email & SMS',       x: 686, y: 36 },
-  { id: 'n-call',     Icon: VideoCamera,   title: 'Decision',       subtitle: 'Condition gate',    x: 866, y: 36, variant: 'gate' },
+  { id: 'n-form',     Icon: Lightning,     title: 'New prospect',        subtitle: 'Sourced + verified',    x: 6,   y: 36,  variant: 'trigger' },
+  { id: 'n-email',    Icon: EnvelopeSimple, title: 'Outreach',    subtitle: 'LinkedIn + email',            x: 176, y: 36 },
+  { id: 'n-booked',   Icon: CalendarCheck, title: 'Update CRM',     subtitle: 'Status + next step',            x: 346, y: 36 },
+  { id: 'n-24hr',     Icon: Clock,         title: 'Wait',           subtitle: 'A few business days',        x: 516, y: 36 },
+  { id: 'n-1hr',      Icon: BellRinging,   title: 'Follow-up',       subtitle: 'Polite nudge',       x: 686, y: 36 },
+  { id: 'n-call',     Icon: VideoCamera,   title: 'Replied?',       subtitle: 'Condition gate',    x: 866, y: 36, variant: 'gate' },
   // outcomes (one tier, fanning out of the decision gate)
-  { id: 'n-proposal', Icon: FileText,      title: 'Outcome A',      subtitle: 'Next action',       x: 56,  y: 268 },
-  { id: 'n-won',      Icon: Trophy,        title: 'Won',            subtitle: 'Goal reached',      x: 240, y: 268, variant: 'win' },
-  { id: 'n-maybe',    Icon: Hourglass,     title: 'Outcome B',      subtitle: 'Not ready yet',     x: 468, y: 268 },
-  { id: 'n-nurture',  Icon: Heart,         title: 'AI Step',        subtitle: 'Follow-up drip',    x: 652, y: 268 },
-  { id: 'n-lost',     Icon: XCircle,       title: 'Lost',           subtitle: 'Closed out',        x: 866, y: 268, variant: 'lost' },
+  { id: 'n-proposal', Icon: FileText,      title: 'Interested',      subtitle: 'Details sent',       x: 56,  y: 268 },
+  { id: 'n-won',      Icon: Trophy,        title: 'Booked',            subtitle: 'Call on the calendar',      x: 240, y: 268, variant: 'win' },
+  { id: 'n-maybe',    Icon: Hourglass,     title: 'Not now',      subtitle: 'Check back later',     x: 468, y: 268 },
+  { id: 'n-nurture',  Icon: Heart,         title: 'Nurture',        subtitle: 'Follow-up sequence',    x: 652, y: 268 },
+  { id: 'n-lost',     Icon: XCircle,       title: 'Closed out',           subtitle: 'Marked in tracker',        x: 866, y: 268, variant: 'lost' },
 ]
 
 type LinkKind = 'solid' | 'dash' | 'loop'
@@ -87,9 +87,9 @@ const LINKS: Link[] = [
 ]
 
 export const TOOLS: { Icon: Icon; label: string }[] = [
-  { Icon: Plug,           label: 'Your CRM' },
-  { Icon: EnvelopeSimple, label: 'Email & SMS' },
-  { Icon: Sparkle,        label: 'AI Assistant' },
+  { Icon: Plug,           label: 'CRM & trackers' },
+  { Icon: EnvelopeSimple, label: 'LinkedIn + email' },
+  { Icon: Sparkle,        label: 'AI-assisted research' },
 ]
 
 const SVGNS = 'http://www.w3.org/2000/svg'
@@ -346,13 +346,12 @@ export default function Autopilot({ compact = false, maxScale = 1 }: AutopilotPr
     >
       {!compact && (
       <header className="autopilot__head">
-        <span className="autopilot__eyebrow">Live automation</span>
+        <span className="autopilot__eyebrow">Live workflow</span>
         <h2 id="autopilot-heading" className="autopilot__headline">
-          Your workflow, end to end.
+          Outreach, end to end.
         </h2>
         <p className="autopilot__intro">
-          PLACEHOLDER - tell me what to put here: two or three sentences walking
-          through this example automation, from the trigger to each outcome.
+          A prospect is sourced and verified, then contacted on LinkedIn and email. Every touch is logged, follow-ups go out on schedule, and each reply ends in a clear outcome: booked, nurtured, or closed out.
         </p>
       </header>
       )}
@@ -364,12 +363,12 @@ export default function Autopilot({ compact = false, maxScale = 1 }: AutopilotPr
             <span className="autopilot__dot autopilot__dot--y" />
             <span className="autopilot__dot autopilot__dot--g" />
           </span>
-          <span className="autopilot__titlebar-label">Automation Workflow</span>
+          <span className="autopilot__titlebar-label">Outreach Workflow</span>
         </div>
 
         <div className="autopilot__canvas">
           <p className="autopilot__caption">
-            Your flow caption, in one short line.
+            Every prospect has a status and a next step.
           </p>
 
           <div className="autopilot__board" aria-hidden="true">
