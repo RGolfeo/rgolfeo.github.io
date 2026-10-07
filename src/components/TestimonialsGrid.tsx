@@ -37,9 +37,9 @@ const CLIPS: Clip[] = [
     id: 'clip-1',
     index: '01',
     src: '',
-    poster: '/placeholders/testimonial-1.jpg',
-    duration: '0:00',
-    kicker: 'Client testimonial',
+    poster: '/proof/dashboard.webp',
+    duration: 'Image',
+    kicker: 'Lead-gen dashboard',
     width: 720,
     height: 1080,
   },
@@ -47,9 +47,9 @@ const CLIPS: Clip[] = [
     id: 'clip-2',
     index: '02',
     src: '',
-    poster: '/placeholders/testimonial-2.jpg',
-    duration: '0:00',
-    kicker: 'Client testimonial',
+    poster: '/proof/linkedin.webp',
+    duration: 'Image',
+    kicker: 'LinkedIn outreach board',
     width: 720,
     height: 1080,
   },
@@ -71,32 +71,29 @@ type Client = {
 const CLIENTS: Client[] = [
   {
     index: '01',
-    name: 'Client Name 1',
-    role: 'PLACEHOLDER ROLE',
+    name: 'Healthcare Credentialing Firm',
+    role: 'Lead Generation VA',
     daily:
-      'PLACEHOLDER - tell me what to put here: one or two sentences on what you run or build for this client day to day.',
-    work: ['Tag', 'Tag', 'Tag'],
-    logoSrc: '/placeholders/logo.svg',
+      'I research and verify qualified healthcare providers, keep outreach-ready records in the tracker, run LinkedIn and email outreach, and send clear daily reports.',
+    work: ['Prospect research', 'LinkedIn', 'Email outreach'],
     Icon: Gauge,
   },
   {
     index: '02',
-    name: 'Client Name 2',
-    role: 'PLACEHOLDER ROLE',
+    name: 'Project-based growth clients',
+    role: 'Growth & Outreach Specialist',
     daily:
-      'PLACEHOLDER - tell me what to put here: one or two sentences on what you run or build for this client day to day.',
-    work: ['Tag', 'Tag', 'Tag'],
-    logoSrc: '/placeholders/logo.svg',
+      'Multichannel lead generation, appointment setting, market research, and CRM pipeline organization for small teams.',
+    work: ['Lead generation', 'CRM', 'Follow-up'],
     Icon: Robot,
   },
   {
     index: '03',
-    name: 'Client Name 3',
-    role: 'PLACEHOLDER ROLE',
+    name: 'Cognizant, TaskUs, GC Services / Verizon',
+    role: 'Client & Financial Operations',
     daily:
-      'PLACEHOLDER - tell me what to put here: one or two sentences on what you run or build for this client day to day.',
-    work: ['Tag', 'Tag', 'Tag'],
-    logoSrc: '/placeholders/logo.svg',
+      'Seven years of high-volume, compliance-driven client work: account and trade requests, billing, refunds, fraud prevention, and accurate documentation.',
+    work: ['Financial ops', 'Documentation', 'Client support'],
     Icon: Code,
   },
 ]
@@ -120,10 +117,10 @@ export default function TestimonialsGrid() {
       <header className="pgrid__head">
         <span className="pgrid__eyebrow">Testimonials</span>
         <h1 className="pgrid__title" id="testimonials-title">
-          Your testimonials headline.
+          Proof, not promises.
         </h1>
         <p className="pgrid__lede">
-          PLACEHOLDER - tell me what to put here: one line that introduces the videos and the client list.
+          Sanitized views of real client work, and the teams I have supported.
         </p>
       </header>
 
@@ -178,7 +175,7 @@ export default function TestimonialsGrid() {
                   <span className="tgrid__cover-sub">
                     {hasVideo
                       ? `${clip.duration} · Tap to play`
-                      : 'PLACEHOLDER - add your video to public/testimonials/'}
+                      : 'Sanitized client work · identifying details removed'}
                   </span>
                 </span>
               </button>
@@ -200,7 +197,7 @@ export default function TestimonialsGrid() {
                   <img src={c.poster} alt="" loading="lazy" decoding="async" />
                 </span>
                 <span className="tgrid__pick-copy">
-                  <span className="tgrid__pick-kicker">Testimonial {c.index}</span>
+                  <span className="tgrid__pick-kicker">Proof {c.index}</span>
                   <span className="tgrid__pick-meta">{c.duration}</span>
                 </span>
               </button>
@@ -211,8 +208,8 @@ export default function TestimonialsGrid() {
         {/* Right: the client ledger, one row per client. */}
         <div className="tgrid__ledger">
           <div className="tgrid__ledger-head">
-            <h2 className="tgrid__ledger-title">Your client list headline here.</h2>
-            <p className="tgrid__ledger-sub">Short supporting line.</p>
+            <h2 className="tgrid__ledger-title">Who I have worked with.</h2>
+            <p className="tgrid__ledger-sub">Client names kept private where required.</p>
           </div>
 
           {/* One plate, three rows split by hairlines. Three boxed cards each
