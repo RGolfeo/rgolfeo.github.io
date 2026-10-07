@@ -15,17 +15,17 @@ type Extension = {
 
 const EXTENSIONS: Extension[] = [
   {
-    name: 'Extension Name One',
-    desc: 'PLACEHOLDER - tell me what to put here: what the extension does and who uses it.',
+    name: 'Sales Navigator research',
+    desc: 'Filter-driven research by title, seniority, geography, and industry before any connection request goes out.',
     imageSrc: '/placeholders/extension-1.jpg',
-    imageAlt: 'Extension one popup placeholder',
+    imageAlt: 'Blurred Sales Navigator research screen',
     Icon: Key,
   },
   {
-    name: 'Extension Name Two',
-    desc: 'PLACEHOLDER - tell me what to put here: what the extension does and who uses it.',
+    name: 'Lead-generation dashboard',
+    desc: 'Pipeline health in one view: lead stages, source mix, daily targets, and next actions.',
     imageSrc: '/placeholders/extension-2.jpg',
-    imageAlt: 'Extension two popup placeholder',
+    imageAlt: 'Blurred lead-generation dashboard',
     Icon: Browser,
   },
 ]
@@ -49,7 +49,7 @@ function ExtensionCard({ ext }: { ext: Extension }) {
           </span>
           <span className="ext-card__urlbar">
             <ExtIcon size={12} weight="bold" />
-            chrome-extension
+            sanitized-view
           </span>
         </div>
         <div className="ext-card__stage">
@@ -65,7 +65,7 @@ function ExtensionCard({ ext }: { ext: Extension }) {
       <div className="ext-card__body">
         <span className="ext-card__badge">
           <ExtIcon size={14} weight="bold" aria-hidden="true" />
-          Chrome Extension
+          Client work
         </span>
         <h4 className="ext-card__name">{ext.name}</h4>
         <p className="ext-card__desc">{ext.desc}</p>
@@ -130,12 +130,12 @@ export function AIStackSection() {
       data-reveal
     >
       <header className="projects__header">
-        <span className="projects__eyebrow">Placeholder category</span>
+        <span className="projects__eyebrow">Workflows</span>
         <h2 className="projects__headline" id="projects-heading">
-          Your systems headline.
+          The systems behind the work.
         </h2>
         <p className="projects__subhead">
-          PLACEHOLDER - tell me what to put here: one line on the systems below.
+          Repeatable processes I run for clients.
           Open a branch to see what sits under it.
         </p>
       </header>
@@ -150,7 +150,7 @@ export function AppsSection() {
   return (
     <section className="projects projects--apps" aria-label="Apps and extensions" data-reveal>
       <div className="projects__panel">
-        <span className="projects__ext-eyebrow">Your apps label</span>
+        <span className="projects__ext-eyebrow">Roles & engagements</span>
         <ul className="projects__apps" role="list">
           {mobileApps.map((app) => (
             <AppCard key={app.name} app={app} />
@@ -159,7 +159,7 @@ export function AppsSection() {
 
         {/* Browser extensions - a compact companion block in the same section */}
         <div className="projects__ext">
-          <span className="projects__ext-eyebrow">Your extensions label</span>
+          <span className="projects__ext-eyebrow">More proof of work</span>
           <ul className="ext-grid" role="list">
             {EXTENSIONS.map((ext) => (
               <ExtensionCard key={ext.name} ext={ext} />
