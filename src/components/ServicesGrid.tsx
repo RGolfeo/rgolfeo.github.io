@@ -13,8 +13,6 @@ import Autopilot, { TOOLS } from '@/components/Autopilot'
  * Projects: the glass, the bento card, plated marks, orange for the index
  * and the accent.
  *
- * Every string below is a PLACEHOLDER. Replace it, or hand this file to your
- * AI assistant and tell it what to put in each spot.
  */
 
 /* ---------- The method ---------- */
@@ -30,42 +28,40 @@ type Stage = {
 const STAGES: Stage[] = [
   {
     index: '01',
-    label: 'Step 1',
-    body: 'PLACEHOLDER - one line on what happens in this step.',
+    label: 'Align',
+    body: 'Clarify goals, audience, tools, and hours, then set up trackers, templates, and an update rhythm.',
     Icon: MagnetStraight,
-    chips: ['Tag 1', 'Tag 2', 'Tag 3', 'Tag 4'],
+    chips: ['Goals', 'Target profile', 'Trackers', 'SOPs'],
   },
   {
     index: '02',
-    label: 'Step 2',
-    body: 'PLACEHOLDER - one line on what happens in this step.',
+    label: 'Execute',
+    body: 'Run the work every day: sourcing, verification, outreach, CRM updates, and follow-ups.',
     Icon: Timer,
-    chips: ['Tag 1', 'Tag 2', 'Tag 3'],
+    chips: ['Sourcing', 'Outreach', 'Follow-up'],
   },
   {
     index: '03',
-    label: 'Step 3',
-    body: 'PLACEHOLDER - one line on the result the client gets.',
+    label: 'Report',
+    body: 'You get clear start and end updates: what moved, what is blocked, and the next actions that matter.',
     Icon: Trophy,
-    chips: ['Tag 1', 'Tag 2', 'Tag 3'],
+    chips: ['Daily updates', 'Pipeline view', 'Next actions'],
   },
 ]
 
 /* ---------- The services ---------- */
 
-// Example tool marks from /public/icons. Swap for the tools you actually use.
-const GHL = '/icons/gohighlevel.png'
-const REACT = '/icons/ai/react.svg'
-const TAILWIND = '/icons/ai/tailwindcss.svg'
-const VITE = '/icons/ai/vite.svg'
-const CLOUDFLARE = '/icons/ai/cloudflare.svg'
-const N8N = '/icons/ai/n8n.svg'
+// Tool marks from /public/icons.
+const LINKEDIN = '/icons/linkedin-color.svg'
+const SHEETS = '/icons/sheets.svg'
 const OPENAI = '/icons/openai.svg'
+const OUTLOOK = '/icons/outlook.svg'
+const CANVA = '/icons/canva.svg'
+const GHL = '/icons/gohighlevel.png'
 const GWS = '/icons/googleworkspace.svg'
-const SLACK = '/icons/slack.svg'
-const CLAUDE_CODE = '/icons/claude-code-logo.png'
-const EXPO = '/icons/ai/expo.svg'
-const CHROME = '/icons/ai/googlechrome.svg'
+const ZOOM = '/icons/zoom.svg'
+const SLACK = '/icons/ai/slack-color.svg'
+const LOOM = '/icons/loom.svg'
 
 type Service = {
   index: string
@@ -76,49 +72,46 @@ type Service = {
   bullets: string[]
 }
 
-const BULLETS = ['PLACEHOLDER benefit 1', 'PLACEHOLDER benefit 2', 'PLACEHOLDER benefit 3']
-const SERVICE_DESC = 'PLACEHOLDER - one line on this service.'
-
 const SERVICES: Service[] = [
   {
     index: '01',
-    title: 'Service One',
-    description: SERVICE_DESC,
-    chip: 'PLACEHOLDER',
-    logos: [GHL, REACT, TAILWIND],
-    bullets: BULLETS,
+    title: 'Qualified lead sourcing',
+    description: 'Targeted prospect lists built around relevance, decision-maker fit, and clear next actions.',
+    chip: 'Find the right people',
+    logos: [LINKEDIN, SHEETS, OPENAI],
+    bullets: ['Verified individual professional emails', 'No duplicates across batches', 'Fit and priority notes on every record'],
   },
   {
     index: '02',
-    title: 'Service Two',
-    description: SERVICE_DESC,
-    chip: 'PLACEHOLDER',
-    logos: [GHL, N8N, OPENAI],
-    bullets: BULLETS,
+    title: 'LinkedIn & email outreach',
+    description: 'Professional outreach that keeps conversations moving without sounding robotic.',
+    chip: 'Start conversations',
+    logos: [LINKEDIN, OUTLOOK, CANVA],
+    bullets: ['Personalized connection requests', 'Email outreach and follow-ups', 'Company LinkedIn content support'],
   },
   {
     index: '03',
-    title: 'Service Three',
-    description: SERVICE_DESC,
-    chip: 'PLACEHOLDER',
-    logos: [GHL, GWS, SLACK],
-    bullets: BULLETS,
+    title: 'CRM & tracker upkeep',
+    description: 'Clean records, accurate statuses, and visible next steps for reliable follow-through.',
+    chip: 'Know what happens next',
+    logos: [GHL, SHEETS, GWS],
+    bullets: ['Pipeline stages kept current', 'Lead scoring and prioritization', 'Dashboards your team can read'],
   },
   {
     index: '04',
-    title: 'Service Four',
-    description: SERVICE_DESC,
-    chip: 'PLACEHOLDER',
-    logos: [REACT, VITE, CLOUDFLARE],
-    bullets: BULLETS,
+    title: 'Calendar & inbox support',
+    description: 'Follow-ups surfaced and communication organized so admin does not take over the day.',
+    chip: 'Protect your time',
+    logos: [OUTLOOK, ZOOM, GWS],
+    bullets: ['Inbox triage and reply drafts', 'Scheduling across US time zones', 'Reminders that keep leads warm'],
   },
   {
     index: '05',
-    title: 'Service Five',
-    description: SERVICE_DESC,
-    chip: 'PLACEHOLDER',
-    logos: [CLAUDE_CODE, EXPO, CHROME],
-    bullets: BULLETS,
+    title: 'Operations follow-through',
+    description: 'Task execution, documented updates, and handoffs that keep small teams aligned.',
+    chip: 'Keep handoffs intact',
+    logos: [SLACK, LOOM, GWS],
+    bullets: ['Daily start and end reports', 'SOPs and reusable templates', 'Credentialing and admin support'],
   },
 ]
 
@@ -143,10 +136,10 @@ export default function ServicesGrid() {
       <header className="pgrid__head">
         <span className="pgrid__eyebrow">Services</span>
         <h1 className="pgrid__title" id="services-title">
-          Your services headline, in one short line.
+          Support built around business outcomes.
         </h1>
         <p className="pgrid__lede">
-          PLACEHOLDER - tell me what to put here: one line on what you offer.
+          Better prospecting, cleaner execution, and stronger follow-up for founders and lean US teams.
         </p>
       </header>
 
@@ -155,14 +148,14 @@ export default function ServicesGrid() {
             in order on the right with a signal running them. */}
         <div className="sgrid__method" aria-labelledby="method-title">
           <div className="sgrid__method-copy">
-            <span className="sgrid__method-eyebrow">Your Method</span>
+            <span className="sgrid__method-eyebrow">How I work</span>
             <h2 className="sgrid__method-title" id="method-title">
-              One. Two. Three.
+              Align. Execute. Report.
               <br />
-              <span>Your method, in three steps.</span>
+              <span>A rhythm that keeps work moving.</span>
             </h2>
             <p className="sgrid__method-sub">
-              PLACEHOLDER - one sentence on why your method works.
+              Clear goals, steady execution, and visible reporting, so you always know what moved and what needs attention.
             </p>
           </div>
 
@@ -191,8 +184,8 @@ export default function ServicesGrid() {
         {/* Five cards, each carrying the marks of what it is built with. */}
         <div className="sgrid__offers">
           <div className="sgrid__offers-head">
-            <h2 className="sgrid__offers-title">Your services, listed.</h2>
-            <p className="sgrid__offers-sub">PLACEHOLDER - one short nudge.</p>
+            <h2 className="sgrid__offers-title">Five ways I can help.</h2>
+            <p className="sgrid__offers-sub">Start with one. Add more as your team grows.</p>
           </div>
           <ul className="bento sgrid__services" role="list">
             {SERVICES.map((s) => (
@@ -224,10 +217,10 @@ export default function ServicesGrid() {
         <div className="sgrid__flow">
           <header className="sgrid__flow-head">
             <div className="sgrid__flow-copy">
-              <span className="sgrid__flow-eyebrow">Live automation</span>
-              <h2 className="sgrid__flow-title">Your automation headline.</h2>
+              <span className="sgrid__flow-eyebrow">Live workflow</span>
+              <h2 className="sgrid__flow-title">From prospect to follow-up.</h2>
               <p className="sgrid__flow-sub">
-                PLACEHOLDER - tell me what to put here: one sentence on what this example automation does for a client.
+                A simplified view of the outreach workflow I run for clients: source, verify, reach out, track, and follow up.
               </p>
             </div>
             <ul className="sgrid__flow-tools" role="list" aria-label="Tools that power this flow">
