@@ -4,7 +4,7 @@ import { useMemo } from 'react'
  * ToolsMarquee
  *
  * Horizontally scrolling strip of brand logos + labels for the tools you work with.
- * PLACEHOLDER - swap the list below for your own tools (icons live in public/icons/).
+ * The tools Ryan works in day to day (icons live in public/icons/).
  * The strip lives on the cream shader page, NOT inside a dark section.
  *
  * Implementation notes:
@@ -38,17 +38,18 @@ type Tool = {
 }
 
 export const tools: Tool[] = [
-  { name: 'Claude Code',          iconPath: '/icons/claude-code-logo.png' },
-  { name: 'Codex',                iconPath: '/icons/codex.svg',           color: '#000000' },
-  { name: 'Cursor',               iconPath: '/icons/cursor.svg',          color: '#0F172A' },
-  { name: 'Hermes AI',            iconPath: '/icons/nousresearch.svg',    color: '#18181B' },
-  { name: 'VS Code',              iconPath: '/icons/vscode.svg' },
-  { name: 'GoHighLevel',          iconPath: '/icons/gohighlevel.png' },
-  { name: 'Lightspeed X-Series',  iconPath: '/icons/lightspeed.png' },
-  { name: 'Google Workspace',     iconPath: '/icons/googleworkspace.svg' },
-  { name: 'Zendesk',              iconPath: '/icons/zendesk.svg',         color: '#03363D' },
-  { name: 'Intercom',             iconPath: '/icons/intercom.svg',        color: '#1F8DED' },
-  { name: 'Slack',                iconPath: '/icons/slack.svg',           color: '#611F69' },
+  { name: 'LinkedIn', iconPath: '/icons/linkedin.svg', color: '#0A66C2' },
+  { name: 'Sales Navigator', iconPath: '/icons/linkedin.svg', color: '#0B4F9C' },
+  { name: 'Google Workspace', iconPath: '/icons/googleworkspace.svg' },
+  { name: 'Google Sheets', iconPath: '/icons/sheets.svg' },
+  { name: 'Outlook', iconPath: '/icons/outlook.svg' },
+  { name: 'Zoom', iconPath: '/icons/zoom.svg' },
+  { name: 'Canva', iconPath: '/icons/canva.svg' },
+  { name: 'ChatGPT', iconPath: '/icons/openai.svg', color: '#0F172A' },
+  { name: 'Claude', iconPath: '/icons/ai/claude-color.svg' },
+  { name: 'Loom', iconPath: '/icons/loom.svg' },
+  { name: 'GoHighLevel', iconPath: '/icons/gohighlevel.png' },
+  { name: 'Slack', iconPath: '/icons/slack.svg', color: '#611F69' },
 ]
 
 export default function ToolsMarquee() {
