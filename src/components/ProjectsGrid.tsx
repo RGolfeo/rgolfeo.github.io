@@ -39,19 +39,17 @@ type Cat = 'work' | 'sites' | 'apps' | 'ai'
 const FILTERS: { key: Cat | 'all'; label: string }[] = [
   { key: 'all', label: 'All' },
   { key: 'work', label: 'Work' },
-  { key: 'sites', label: 'Sites' },
-  { key: 'apps', label: 'Apps' },
-  { key: 'ai', label: 'AI' },
+  { key: 'sites', label: 'Gallery' },
+  { key: 'apps', label: 'Experience' },
+  { key: 'ai', label: 'Workflows' },
 ]
 
-/** Example tool marks, from public/icons. Swap for what you build with. */
-const GHL = '/icons/gohighlevel.png'
-const CLAUDE_CODE = '/icons/claude-code-logo.png'
-const CODEX = '/icons/ai/codex.svg'
-const HERMES = '/icons/ai/hermes.svg'
-const PLAY = '/icons/ai/googleplay.svg'
-const CHROME = '/icons/ai/googlechrome.svg'
-const EXPO = '/icons/ai/expo.svg'
+/** Tool marks, from public/icons. */
+const LINKEDIN = '/icons/linkedin-color.svg'
+const SHEETS = '/icons/sheets.svg'
+const GWS = '/icons/googleworkspace.svg'
+const CLAUDE = '/icons/ai/claude-color.svg'
+const OUTLOOK = '/icons/outlook.svg'
 
 const WF_SHOTS = ['project-1.jpg', 'project-2.jpg', 'project-3.jpg', 'project-4.jpg'].map(
   (f) => `/placeholders/${f}`,
@@ -66,14 +64,12 @@ const APP_SHOTS = [
   '/placeholders/extension-2.jpg',
 ]
 
-const BUILD_DESC = 'PLACEHOLDER - tell me what to put here: two lines on what this project is and the result it got.'
-
-/** The three featured builds: each its own card in the stack, each its own
- *  pop-up. */
+/** The three featured pieces: each its own card in the stack, each its own
+ * pop-up document. */
 const BUILDS: Project[] = [
-  { id: 'ticketing', cat: 'work', index: '03', kicker: 'Placeholder category', title: 'Featured Project One', desc: BUILD_DESC, Icon: () => <Ticket size={20} weight="duotone" />, logos: [GHL], eyebrow: 'Featured build', Section: TicketingPanel, Preview: () => null },
-  { id: 'framework', cat: 'ai', index: '04', kicker: 'Placeholder category', title: 'Featured Project Two', desc: BUILD_DESC, Icon: () => <Robot size={20} weight="duotone" />, logos: [CLAUDE_CODE], eyebrow: 'Featured build', Section: FrameworkPanel, Preview: () => null },
-  { id: 'workflow', cat: 'ai', index: '05', kicker: 'Placeholder category', title: 'Featured Project Three', desc: BUILD_DESC, Icon: () => <FlowArrow size={20} weight="duotone" />, logos: [CLAUDE_CODE, CODEX, HERMES], eyebrow: 'Featured build', Section: WorkflowPanel, Preview: () => null },
+  { id: 'ticketing', cat: 'work', index: '03', kicker: 'Case study', title: 'Healthcare outreach system', desc: 'From scattered research to 287 tracked leads: 170 outreach-ready and 57 high-priority.', Icon: () => <Ticket size={20} weight="duotone" />, logos: [LINKEDIN], eyebrow: 'Case study', Section: TicketingPanel, Preview: () => null },
+  { id: 'framework', cat: 'work', index: '04', kicker: 'Template', title: 'Daily reporting template', desc: 'Start and end-of-shift updates a client can read in under a minute.', Icon: () => <Robot size={20} weight="duotone" />, logos: [GWS], eyebrow: 'Template', Section: FrameworkPanel, Preview: () => null },
+  { id: 'workflow', cat: 'work', index: '05', kicker: 'Operations', title: 'Credentialing support workflow', desc: 'CAQH, NPI, and license checks, tracking logs, and payer follow-ups.', Icon: () => <FlowArrow size={20} weight="duotone" />, logos: [SHEETS], eyebrow: 'Operations', Section: WorkflowPanel, Preview: () => null },
 ]
 
 const leaves = (n: StackNode): StackNode[] => (n.children?.length ? n.children.flatMap(leaves) : [n])
@@ -99,13 +95,13 @@ function WorkflowsPreview() {
 function PlanPreview() {
   return (
     <div className="bento__media bento__doc" aria-hidden="true">
-      <span className="bento__doc-eyebrow">Placeholder document</span>
-      <span className="bento__doc-title">Your document title here.</span>
+      <span className="bento__doc-eyebrow">Sample SOP</span>
+      <span className="bento__doc-title">Prospect sourcing, verified.</span>
       <span className="bento__doc-flow">
-        <i>Step</i>
-        <i>Step</i>
-        <i>Step?</i>
-        <i className="is-on">Result</i>
+        <i>Source</i>
+        <i>Verify</i>
+        <i>Unique?</i>
+        <i className="is-on">Deliver</i>
       </span>
       <span className="bento__doc-line" />
       <span className="bento__doc-line bento__doc-line--short" />
@@ -162,11 +158,11 @@ function AppsPreview() {
 }
 
 const PROJECTS: Project[] = [
-  { id: 'workflows', cat: 'work', index: '01', title: 'Project Title', desc: 'PLACEHOLDER - tell me what to put here: what these screens show.', Icon: FlowIcon, logos: [GHL], eyebrow: 'Screenshots', Section: AutomationsPanel, span: 2, Preview: WorkflowsPreview },
-  { id: 'plan', cat: 'work', index: '02', title: 'Sample Document', desc: 'PLACEHOLDER - tell me what to put here: the document this opens.', Icon: PlanIcon, logos: [GHL], eyebrow: 'Sample document', Section: PlanPanel, Preview: PlanPreview },
-  { id: 'funnels', cat: 'sites', index: '06', title: 'Pages and sites', desc: 'PLACEHOLDER - the pages in this reel. Spin the reel.', Icon: GlobeIcon, logos: [GHL], eyebrow: 'Pages and sites', Section: BarrelPanel, Preview: FunnelsPreview },
-  { id: 'ai', cat: 'ai', index: '07', title: 'Your systems title here', desc: 'PLACEHOLDER - tell me what to put here: the systems you run.', Icon: SparkIcon, logos: [CLAUDE_CODE, CODEX, HERMES], eyebrow: 'Your systems', Section: AIWindow, Preview: AIPreview },
-  { id: 'apps', cat: 'apps', index: '08', title: 'Apps and tools', desc: 'PLACEHOLDER - tell me what to put here: the apps and tools you ship.', Icon: DeviceIcon, logos: [PLAY, EXPO, CHROME], eyebrow: 'Your apps', Section: AppsWindow, span: 2, Preview: AppsPreview },
+  { id: 'workflows', cat: 'work', index: '01', title: 'Proof of work', desc: 'Sanitized screens from real client systems: dashboard, pipeline, LinkedIn board, and Sales Navigator.', Icon: FlowIcon, logos: [LINKEDIN, SHEETS], eyebrow: 'Screenshots', Section: AutomationsPanel, span: 2, Preview: WorkflowsPreview },
+  { id: 'plan', cat: 'work', index: '02', title: 'Prospect sourcing SOP', desc: 'The rules I follow to deliver clean, verified, duplicate-free prospect batches.', Icon: PlanIcon, logos: [GWS], eyebrow: 'Sample document', Section: PlanPanel, Preview: PlanPreview },
+  { id: 'funnels', cat: 'sites', index: '06', title: 'Work gallery', desc: 'Spin the reel through sanitized client screens and sample documents.', Icon: GlobeIcon, logos: [SHEETS], eyebrow: 'Work gallery', Section: BarrelPanel, Preview: FunnelsPreview },
+  { id: 'ai', cat: 'ai', index: '07', title: 'Workflows I run', desc: 'The repeatable systems behind my outreach and admin work.', Icon: SparkIcon, logos: [LINKEDIN, OUTLOOK, CLAUDE], eyebrow: 'Workflows', Section: AIWindow, Preview: AIPreview },
+  { id: 'apps', cat: 'apps', index: '08', title: 'Experience', desc: 'Current engagements plus seven years across BPO, financial operations, and remote support.', Icon: DeviceIcon, logos: [LINKEDIN], eyebrow: 'Experience', Section: AppsWindow, span: 2, Preview: AppsPreview },
 ]
 
 /** The icon tile, or the real marks stacked horizontally in its place. */
@@ -300,9 +296,9 @@ export default function ProjectsGrid() {
       <header className="pgrid__head">
         <span className="pgrid__eyebrow">Projects</span>
         <h1 className="pgrid__title" id="projects-title">
-          Your projects headline goes right here.
+          Work you can inspect.
         </h1>
-        <p className="pgrid__lede">PLACEHOLDER - tell me what to put here: one line on the work below. Open a card to see it full size.</p>
+        <p className="pgrid__lede">Real client systems, intentionally sanitized. Open a card to see it full size.</p>
       </header>
 
       {phone && (
