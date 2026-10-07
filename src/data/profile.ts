@@ -2,9 +2,7 @@
  * YOUR IDENTITY - start here.
  *
  * Everything that says who you are lives in this file: name, handle, photo,
- * socials, email and the Home headline. Every value below is a PLACEHOLDER.
- * Replace the text, or hand this file to your AI assistant and tell it what
- * to put in each field.
+ * socials, email and the Home headline.
  *
  * Page-specific copy (projects, services, testimonials, FAQs) lives in the
  * other files in src/data/ and at the top of each view component.
@@ -46,31 +44,30 @@ export type Profile = {
 }
 
 export const profile: Profile = {
-  name: 'Your Name',
-  firstName: 'Your Name',
-  handle: '@yourhandle',
-  role: 'PLACEHOLDER - your title',
-  avatarSrc: '/avatar.svg',
-  verifiedLabel: 'PLACEHOLDER - what the tick means (e.g. a certification)',
-  email: 'you@example.com',
-  location: 'PLACEHOLDER - your city or timezone',
-  // Pick any icon from https://phosphoricons.com and import it above.
+  name: 'Ryan Golfeo',
+  firstName: 'Ryan',
+  handle: '@rgolfeo',
+  role: 'Lead Generation & Virtual Assistant',
+  avatarSrc: '/avatar.webp',
+  verifiedLabel: '7+ years of client-facing experience',
+  email: 'rgolfeo41@gmail.com',
+  location: 'Pasig City, Philippines',
   stats: [
-    { value: '0 yrs', label: 'PLACEHOLDER', Icon: Briefcase },
-    { value: '#000', label: 'PLACEHOLDER', Icon: SealCheck },
-    { value: 'GMT+0', label: 'PLACEHOLDER', Icon: Clock },
+    { value: '7+ yrs', label: 'Client-facing experience', Icon: Briefcase },
+    { value: '287', label: 'LinkedIn leads tracked', Icon: SealCheck },
+    { value: 'GMT+8', label: 'US-hours overlap', Icon: Clock },
   ],
   // The intro types this line, then flies it into the Home headline.
   // Keep it short: two halves, 5-8 words total.
-  displayName: { line1: 'Your headline here.', line2: 'Keep it short.' },
+  displayName: { line1: 'I find the leads.', line2: 'You close the deals.' },
   hero: {
-    body: 'PLACEHOLDER - one line on what you do and who you do it for.',
-    portraitSrc: '/avatar.svg',
-    portraitAlt: 'Portrait placeholder',
+    body: 'Lead generation and virtual assistant support for founders and lean US teams: sourcing, outreach, CRM, and follow-through.',
+    portraitSrc: '/avatar.webp',
+    portraitAlt: 'Ryan Golfeo in a professional workspace',
   },
   socials: [
-    { label: 'Facebook profile', href: '#', iconPath: '/icons/facebook.svg' },
-    { label: 'LinkedIn profile', href: '#', iconPath: '/icons/linkedin.svg' },
-    { label: 'Discord profile', href: '#', iconPath: '/icons/discord.svg' },
+    { label: 'LinkedIn profile', href: 'https://www.linkedin.com/in/ryan-golfeo-48a11a330', iconPath: '/icons/linkedin.svg' },
+    { label: 'Email Ryan', href: 'mailto:rgolfeo41@gmail.com', iconPath: '/icons/mail.svg' },
+    { label: 'View resume', href: 'https://drive.google.com/file/d/1JB3KWuVM-rXMoP-nXxD5KnlpUORhomLc/view', iconPath: '/icons/resume.svg' },
   ],
 }
