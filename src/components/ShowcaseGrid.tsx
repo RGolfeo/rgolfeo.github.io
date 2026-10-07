@@ -41,7 +41,9 @@ export default function ShowcaseGrid() {
       </header>
 
       <div className="home__glass ktools__glass">
-        <BarrelPanel />
+        <div style={{ height: 'min(72vh, 640px)', minHeight: 420, position: 'relative', display: 'flex', flexDirection: 'column' }}>
+          <BarrelPanel />
+        </div>
       </div>
     </section>
   )
