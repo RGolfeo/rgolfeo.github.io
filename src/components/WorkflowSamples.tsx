@@ -22,10 +22,10 @@ import { X } from '@/components/slab'
 type Sample = { file: string; label: string }
 
 const SAMPLES: Sample[] = [
-  { file: 'project-1.jpg', label: 'Project Screenshot 1' },
-  { file: 'project-2.jpg', label: 'Project Screenshot 2' },
-  { file: 'project-3.jpg', label: 'Project Screenshot 3' },
-  { file: 'project-4.jpg', label: 'Project Screenshot 4' },
+  { file: 'project-1.jpg', label: 'Lead-generation dashboard' },
+  { file: 'project-2.jpg', label: 'Master prospect pipeline' },
+  { file: 'project-3.jpg', label: 'LinkedIn outreach dashboard' },
+  { file: 'project-4.jpg', label: 'Sales Navigator research' },
 ]
 
 const srcOf = (s: Sample) => `/placeholders/${encodeURIComponent(s.file)}`
@@ -64,7 +64,7 @@ export default function WorkflowSamples() {
   return (
     <section className="wfs" id="workflow-samples" aria-labelledby="wfs-heading" data-reveal>
       <p className="wfs__caption" id="wfs-heading">
-        PLACEHOLDER - tell me what to put here: one line on what these screenshots show.
+        Real client systems, intentionally blurred. Names, practices, and URLs are hidden so the structure stays visible.
       </p>
 
       <div className="wfs__strip">
