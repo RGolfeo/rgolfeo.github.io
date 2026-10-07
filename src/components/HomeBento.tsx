@@ -42,7 +42,7 @@ const OFFERS = [
   { Icon: AppWindow, title: 'Operations follow-through', note: 'Reporting and handoffs that hold' },
 ] as const
 
-const CLIENTS = [
+const CLIENTS: { name: string; role: string; work: string; logo?: string }[] = [
   { name: 'Healthcare Credentialing Firm', role: 'Lead Generation VA (2026 - present)', work: 'Prospect research · LinkedIn · Email outreach' },
   { name: 'Growth & Outreach Projects', role: 'Growth & Outreach Specialist (2026)', work: 'Lead gen · CRM · Follow-up' },
   { name: 'Cognizant', role: 'Senior Process Executive (2024 - 2025)', work: 'Financial operations · Documentation · Client support' },
