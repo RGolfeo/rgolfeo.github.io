@@ -1,4 +1,4 @@
-import Flagship from '@/components/Flagship'
+import { BarrelPanel } from '@/components/ProjectPanels'
 
 /**
  * ShowcaseGrid - the /showcase view on one glass sheet.
@@ -15,10 +15,10 @@ export default function ShowcaseGrid() {
         <div className="ktools__head-copy">
           <span className="pgrid__eyebrow">Showcase</span>
           <h1 className="pgrid__title" id="showcase-title">
-            Your flagship product, and the people using it.
+            Spin through the work.
           </h1>
           <p className="pgrid__lede">
-            PLACEHOLDER - tell me what to put here: one line on what this product is and why a visitor should look at it.
+            Sanitized client dashboards, pipelines, and sample documents. Drag the reel, then open any page.
           </p>
         </div>
 
@@ -27,21 +27,21 @@ export default function ShowcaseGrid() {
             listing, and point the link at it. */}
         <div className="ktools__vote">
           <p className="ktools__vote-label">
-            Featured on
+            Open to work
             <span aria-hidden="true" className="ktools__vote-dot" />
-            <span className="ktools__vote-ask">Placeholder</span>
+            <span className="ktools__vote-ask">Part-time, contract</span>
           </p>
-          <a className="ktools__vote-frame ktools__vote-card" href="#">
-            <img src="/placeholders/badge.svg" alt="" width="48" height="48" />
+          <a className="ktools__vote-frame ktools__vote-card" href="https://www.linkedin.com/in/ryan-golfeo-48a11a330" target="_blank" rel="noopener noreferrer">
+            <img src="/icons/linkedin-color.svg" alt="" width="48" height="48" />
             <span className="ktools__vote-text">
-              PLACEHOLDER - a badge, award or launch link
+              Connect with Ryan on LinkedIn
             </span>
           </a>
         </div>
       </header>
 
       <div className="home__glass ktools__glass">
-        <Flagship eyebrow="Flagship build" />
+        <BarrelPanel />
       </div>
     </section>
   )
