@@ -6,7 +6,7 @@
  * render whatever shape they find here, so swapping in content is a data edit
  * and never a JSX edit. Keep the exported names and types stable.
  *
- * Every value below is a PLACEHOLDER. Shape rules:
+ * Shape rules:
  * - The root is you. Its children are the categories (branches).
  * - A branch with `status` is itself a system; a branch without one is a
  *   group whose children are the systems.
@@ -59,85 +59,82 @@ export type StackNode = {
 const ANTHROPIC: StackLogo = { src: '/icons/anthropic.svg', name: 'Anthropic' }
 const OPENAI: StackLogo = { src: '/icons/openai.svg', name: 'OpenAI' }
 const SLACK: StackLogo = { src: '/icons/slack.svg', name: 'Slack' }
-const NOUS: StackLogo = { src: '/icons/nousresearch.svg', name: 'Nous Research' }
+const LINKEDIN: StackLogo = { src: '/icons/linkedin.svg', name: 'LinkedIn' }
 
-const WHAT = 'PLACEHOLDER - tell me what to put here: one plain line on what this does.'
-const STACK = 'PLACEHOLDER - model, tools, where it runs'
-
-/** Single root: you. Branches are the categories. */
+/** Single root: Ryan. Branches are the categories. */
 export const aiStack: StackNode = {
   id: 'root',
   Icon: Sparkle,
   name: profile.name,
-  what: 'PLACEHOLDER - tell me what to put here: one line on the systems you build and run.',
-  stack: 'PLACEHOLDER - your brand',
+  what: 'The repeatable systems behind my lead generation and support work.',
+  stack: 'Lead Generation & Virtual Assistant',
   children: [
     {
       id: 'project-a',
       Icon: Coffee,
-      logos: [ANTHROPIC],
-      name: 'Project A',
-      what: WHAT,
-      stack: STACK,
+      logos: [LINKEDIN],
+      name: 'Daily Prospect Batches',
+      what: 'Verified, outreach-ready professionals delivered in clean batches, deduplicated and ready to contact.',
+      stack: 'LinkedIn, license lookups, Google Sheets',
       status: 'Live',
     },
     {
       id: 'category-one',
       Icon: Robot,
-      name: 'Category One',
-      what: 'PLACEHOLDER - tell me what to put here: what the systems in this group have in common.',
+      name: 'Outreach',
+      what: 'Getting from a verified prospect to a real conversation.',
       children: [
         {
           id: 'project-b',
           Icon: Article,
-          logos: [ANTHROPIC],
-          name: 'Project B',
-          what: WHAT,
-          stack: STACK,
-          status: 'Internal',
+          logos: [LINKEDIN],
+          name: 'LinkedIn Outreach Board',
+          what: 'Tracks every lead with priority, request status, and the next action in one view.',
+          stack: 'LinkedIn, Sales Navigator, Google Sheets',
+          status: 'Live',
         },
         {
           id: 'project-c',
           Icon: FilmSlate,
           logos: [OPENAI],
-          name: 'Project C',
-          what: WHAT,
-          stack: STACK,
-          status: 'Internal',
+          name: 'Email Outreach & Follow-ups',
+          what: 'Personalized emails with a set follow-up rhythm, so no reply slips through.',
+          stack: 'Outlook, templates, tracker',
+          status: 'Live',
         },
         {
           id: 'project-d',
           Icon: UsersThree,
-          logos: [ANTHROPIC],
-          name: 'Project D',
-          what: WHAT,
-          stack: STACK,
-          status: 'Internal',
+          logos: [LINKEDIN],
+          name: 'Speaker & Partner Outreach',
+          what: 'Reaching software and industry partners to set up webinar and speaking sessions for a client.',
+          stack: 'Email, LinkedIn, event briefs',
+          status: 'Live',
         },
       ],
     },
     {
       id: 'category-two',
       Icon: Database,
-      name: 'Category Two',
-      what: 'PLACEHOLDER - tell me what to put here: what the systems in this group have in common.',
+      name: 'Pipeline & CRM',
+      what: 'Keeping every record clean, current, and easy to act on.',
       children: [
         {
           id: 'project-e',
           Icon: SlackLogo,
-          logos: [ANTHROPIC, SLACK],
-          name: 'Project E',
-          what: WHAT,
-          stack: STACK,
+          logos: [SLACK],
+          name: 'Master Prospect Pipeline',
+          what: 'Organizes research by record type, specialty, location, source, and next step.',
+          stack: 'Google Sheets, CRM',
           status: 'Live',
         },
         {
           id: 'project-f',
           Icon: MagnifyingGlass,
-          logos: [ANTHROPIC],
-          name: 'Project F',
-          what: WHAT,
-          stack: STACK,
+          logos: [OPENAI],
+          name: 'Lead Scoring',
+          what: 'Tiers prospects by fit so the highest-value leads get attention first.',
+          stack: 'Tier A / Tier B scoring',
           status: 'Live',
         },
       ],
@@ -145,34 +142,34 @@ export const aiStack: StackNode = {
     {
       id: 'category-three',
       Icon: ChatCircleDots,
-      name: 'Category Three',
-      what: 'PLACEHOLDER - tell me what to put here: what the systems in this group have in common.',
+      name: 'Admin & Operations',
+      what: 'The support work that keeps a lean team moving.',
       children: [
         {
           id: 'project-g',
           Icon: FlowArrow,
           logos: [ANTHROPIC],
-          name: 'Project G',
-          what: WHAT,
-          stack: STACK,
+          name: 'Credentialing Support',
+          what: 'Application status checks, document verification, CAQH and NPI lookups, and tracking-log updates.',
+          stack: 'CAQH ProView, NPI Registry, state boards',
           status: 'Live',
         },
         {
           id: 'project-h',
           Icon: PhoneCall,
-          logos: [ANTHROPIC],
-          name: 'Project H',
-          what: WHAT,
-          stack: STACK,
-          status: 'Beta',
+          logos: [SLACK],
+          name: 'Calendar & Inbox',
+          what: 'Scheduling across US time zones, inbox triage, and meeting follow-ups.',
+          stack: 'Outlook, Zoom, WhatsApp',
+          status: 'Live',
         },
         {
           id: 'project-i',
           Icon: Browser,
-          logos: [ANTHROPIC],
-          name: 'Project I',
-          what: WHAT,
-          stack: STACK,
+          logos: [OPENAI],
+          name: 'Daily & Weekly Reports',
+          what: 'Start and end-of-shift updates plus weekly summaries, in the client time zone.',
+          stack: 'Google Docs, Google Sheets',
           status: 'Live',
         },
       ],
@@ -180,19 +177,19 @@ export const aiStack: StackNode = {
     {
       id: 'project-j',
       Icon: Broadcast,
-      logos: [NOUS],
-      name: 'Project J',
-      what: WHAT,
-      stack: STACK,
-      status: 'Live',
+      logos: [OPENAI, ANTHROPIC],
+      name: 'AI-Assisted Research',
+      what: 'AI tools speed up research, drafting, and SOPs, and every fact still gets checked by hand.',
+      stack: 'ChatGPT, Claude',
+      status: 'Internal',
       children: [
         {
           id: 'project-k',
           Icon: Timer,
-          name: 'Project K',
-          what: WHAT,
-          stack: STACK,
-          status: 'Live',
+          name: 'SOPs & Templates',
+          what: 'Reusable intake notes, outreach templates, and step-by-step SOPs.',
+          stack: 'Google Docs',
+          status: 'Internal',
         },
       ],
     },
