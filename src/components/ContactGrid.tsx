@@ -60,7 +60,7 @@ export default function ContactGrid() {
       <header className="pgrid__head">
         <span className="pgrid__eyebrow">FAQs / Contact</span>
         <h1 className="pgrid__title" id="contact-title">
-          Let us keep the work moving.
+          Let's keep the work moving.
         </h1>
         <p className="pgrid__lede">
           Tell me what your team is trying to move forward: leads, outreach, or day-to-day operations. I will reply with next steps.
@@ -197,7 +197,7 @@ export default function ContactGrid() {
                     {status.note}
                   </span>
                 ) : (
-                  <span className="cgrid__hint">Short reassurance line, e.g. your reply time.</span>
+                  <span className="cgrid__hint">Opens your email app with your message ready to send.</span>
                 )}
               </div>
             </form>
