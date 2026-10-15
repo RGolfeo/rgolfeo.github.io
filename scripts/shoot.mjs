@@ -99,6 +99,14 @@ for (const v of VIEWS) {
     await og.screenshot({ path: 'public/og-image.jpg', type: 'jpeg', quality: 88 })
     await og.screenshot({ path: 'shots/og-image.png' })
     await og.close()
+    // Resume: printed to a real-text PDF, plus page images for review.
+    const cv = await browser.newPage({ viewport: { width: 816, height: 1056 } })
+    await cv.goto(pathToFileURL(process.cwd() + '/scripts/resume/resume.html').href, { waitUntil: 'networkidle' })
+    await cv.evaluate(() => document.fonts.ready)
+    await cv.pdf({ path: 'public/resume.pdf', format: 'Letter', printBackground: true, preferCSSPageSize: true })
+    await cv.emulateMedia({ media: 'print' })
+    await cv.screenshot({ path: 'shots/resume.png', fullPage: true })
+    await cv.close()
     const { readdirSync } = await import('node:fs')
     for (const f of readdirSync('public/samples').filter((x) => x.startsWith('gallery-') && x.endsWith('.html'))) {
       const base = f.replace('.html', '')

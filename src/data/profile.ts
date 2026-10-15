@@ -72,6 +72,6 @@ export const profile: Profile = {
   socials: [
     { label: 'LinkedIn profile', href: 'https://www.linkedin.com/in/ryan-golfeo-48a11a330', iconPath: '/icons/linkedin.svg' },
     { label: 'Email Ryan', href: 'mailto:rgolfeo41@gmail.com', iconPath: '/icons/mail.svg' },
-    { label: 'View resume', href: 'https://drive.google.com/file/d/1JB3KWuVM-rXMoP-nXxD5KnlpUORhomLc/view', iconPath: '/icons/resume.svg' },
+    { label: 'View resume (PDF)', href: '/resume.pdf', iconPath: '/icons/resume.svg' },
   ],
 }
