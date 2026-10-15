@@ -26,6 +26,8 @@ for (const v of VIEWS) {
     colorScheme: v.scheme,
     reducedMotion: 'reduce',
   })
+  // The site defaults to light and remembers the toggle in localStorage.
+  if (v.scheme === 'dark') await ctx.addInitScript(() => localStorage.setItem('theme', 'dark'))
   for (const r of ROUTES) {
     const page = await ctx.newPage()
     page.on('console', (m) => { if (m.type() === 'error' || m.type() === 'warning') log.push(`[${v.tag} ${r}] ${m.type()}: ${m.text()}`) })
@@ -125,8 +127,10 @@ await page.screenshot({ path: 'shots/motion-lantern.png' })
 await page.goto(BASE + '/services', { waitUntil: 'networkidle' })
 await page.waitForTimeout(5000)
 await page.screenshot({ path: 'shots/motion-services.png' })
-await page.emulateMedia({ colorScheme: 'dark' })
-await page.reload({ waitUntil: 'networkidle' })
+await page.evaluate(() => localStorage.setItem('theme', 'dark'))
+await page.goto(BASE + '/', { waitUntil: 'networkidle' })
+await page.mouse.move(700, 500)
+await page.mouse.move(820, 560, { steps: 10 })
 await page.waitForTimeout(7000)
 await page.screenshot({ path: 'shots/motion-dark.png' })
 await browser.close()
