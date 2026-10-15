@@ -112,6 +112,30 @@ for (const v of VIEWS) {
   }
 }
 
+// A few interactions: the dialogs and switches people actually use.
+{
+  const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, reducedMotion: 'reduce' })
+  const page = await ctx.newPage()
+  page.on('pageerror', (e) => log.push(`[interact] pageerror: ${e.message}`))
+  await page.goto(BASE + '/projects', { waitUntil: 'networkidle' })
+  const cards = page.locator('.bento__card')
+  const n = Math.min(await cards.count(), 6)
+  for (let i = 0; i < n; i++) {
+    try {
+      await cards.nth(i).click({ timeout: 3000 })
+      await page.waitForTimeout(900)
+      await page.screenshot({ path: `shots/open-project-${i}.png` })
+      await page.keyboard.press('Escape')
+      await page.waitForTimeout(500)
+    } catch (e) { log.push(`[interact] project card ${i}: ${e.message.split('\n')[0]}`) }
+  }
+  await page.goto(BASE + '/track-record', { waitUntil: 'networkidle' })
+  await page.locator('.tgrid__pick').nth(2).click()
+  await page.waitForTimeout(600)
+  await page.screenshot({ path: 'shots/open-track-pipeline.png' })
+  await ctx.close()
+}
+
 // One run with motion on, to see the intro hand-off and the live background.
 const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, colorScheme: 'light' })
 const page = await ctx.newPage()

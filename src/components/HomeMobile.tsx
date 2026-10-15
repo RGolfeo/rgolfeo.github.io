@@ -50,7 +50,7 @@ const TILES = [
   { n: '01', label: 'Projects', to: '/projects', title: 'Work you can inspect.', desc: 'Real dashboards, pipelines, and SOPs, details hidden.', img: '/proof/dashboard.svg' },
   { n: '02', label: 'Services', to: '/services', title: 'Five ways I can help.', desc: 'Leads, outreach, CRM, healthcare admin, and support.', Icon: Stack },
   { n: '03', label: 'Showcase', to: '/showcase', title: 'Spin through the work.', desc: 'A 3D reel of real client screens, details hidden.', Icon: Coffee, accent: true },
-  { n: '04', label: 'Track record', to: '/track-record', title: 'New to freelance, not to clients.', desc: 'Where I have worked and what I did.', img: '/proof/dashboard.svg' },
+  { n: '04', label: 'Track record', to: '/track-record', title: 'New to freelance, not to clients.', desc: 'Where I have worked and what I did.', img: '/proof/linkedin.svg' },
   { n: '05', label: 'About', to: '/about', title: `Hi, I'm ${profile.firstName}.`, desc: 'Seven years of US client work, now freelance.', img: profile.avatarSrc },
 ] as const
 
