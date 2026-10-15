@@ -1,13 +1,12 @@
 name: Add npm packages
 
-# Run by hand: installs the listed packages on the chosen branch and commits
-# the updated package.json + package-lock.json back to it.
+# Push a branch named deps/* with the packages listed (space-separated) in
+# .github/deps-add.txt. This installs them and commits the updated
+# package.json + package-lock.json back to that branch.
 on:
-  workflow_dispatch:
-    inputs:
-      packages:
-        description: Space-separated packages to add
-        required: true
+  push:
+    branches: ['deps/**']
+    paths: ['.github/deps-add.txt']
 
 permissions:
   contents: write
@@ -20,12 +19,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: npm install --no-audit --no-fund ${{ inputs.packages }}
+      - run: npm install --no-audit --no-fund $(cat .github/deps-add.txt)
         env:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add package.json package-lock.json
-          git commit -m "Add ${{ inputs.packages }}" || echo "nothing to commit"
+          git rm -q .github/deps-add.txt
+          git commit -m "Add $(git show HEAD:.github/deps-add.txt)" || echo "nothing to commit"
           git push
