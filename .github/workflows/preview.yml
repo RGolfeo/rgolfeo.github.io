@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   preview:
@@ -28,9 +28,12 @@ jobs:
           npx vite preview --port 4173 --strictPort &
           npx --yes wait-on@8 http://localhost:4173 -t 60000
           node scripts/shoot.mjs
-      - uses: actions/upload-artifact@v4
+      # Screenshots go to a throwaway orphan branch so they can be fetched with git.
+      - name: Publish screenshots
         if: always()
-        with:
-          name: shots
-          path: shots
-          retention-days: 3
+        run: |
+          cd shots
+          git init -q -b shots
+          git add -A
+          git -c user.name=preview -c user.email=preview@users.noreply.github.com commit -qm "shots for ${GITHUB_SHA}"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${GITHUB_REPOSITORY}.git" shots:refs/heads/shots
