@@ -1,0 +1,64 @@
+[desk /] headline font 54.0215px width 980 scroll 980 line-em 18.14
+[desk /] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[desk /projects] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[desk /services] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[desk /showcase] warning: [.WebGL-0x89400120e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[desk /showcase] warning: [.WebGL-0x89400120e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[desk /showcase] warning: [.WebGL-0x89400120e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[desk /showcase] warning: [.WebGL-0x89400120e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)
+[desk /showcase] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[desk /track-record] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[desk /about] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[desk /contact] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[desk /privacy] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[desk /terms] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[desk /thank-you] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[desk /missing-page] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[desk-dark /] headline font 54.0215px width 980 scroll 980 line-em 18.14
+[desk-dark /] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[desk-dark /projects] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[desk-dark /services] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[desk-dark /showcase] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[desk-dark /track-record] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[desk-dark /about] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[desk-dark /contact] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[desk-dark /privacy] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[desk-dark /terms] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[desk-dark /thank-you] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[desk-dark /missing-page] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[lap /] headline font 46.1075px width 834 scroll 834 line-em 18.09
+[lap /] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[lap /projects] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[lap /services] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[lap /showcase] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[lap /track-record] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[lap /about] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[lap /contact] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[lap /privacy] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[lap /terms] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[lap /thank-you] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[lap /missing-page] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[phone /] headline font 33.6538px width 350 scroll 350 line-em 10.40
+[phone /] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[phone /projects] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[phone /services] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[phone /showcase] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[phone /track-record] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[phone /about] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[phone /contact] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[phone /privacy] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[phone /terms] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[phone /thank-you] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[phone /missing-page] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[phone-dark /] headline font 33.6538px width 350 scroll 350 line-em 10.40
+[phone-dark /] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[phone-dark /projects] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[phone-dark /services] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[phone-dark /showcase] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[phone-dark /track-record] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[phone-dark /about] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[phone-dark /contact] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[phone-dark /privacy] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[phone-dark /terms] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[phone-dark /thank-you] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
+[phone-dark /missing-page] fonts Figtree Variable 300 900, Bricolage Grotesque Variable 200 800
