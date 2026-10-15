@@ -1,0 +1,1 @@
+@fontsource-variable/bricolage-grotesque @fontsource-variable/figtree
