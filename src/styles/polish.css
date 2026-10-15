@@ -351,3 +351,65 @@ body::before {
 @media (max-width: 1099px) {
   .trk__frame { height: auto; aspect-ratio: 1200 / 760; }
 }
+
+/* ---------- Thank-you page ----------
+   It shipped with no styles at all (bare text in the corner). Same card
+   language as the legal pages. */
+.thankyou {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+.thankyou__card {
+  width: min(520px, 100%);
+  padding: clamp(28px, 4vw, 44px);
+  border-radius: var(--radius-card);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.thankyou__eyebrow { font-size: 13px; font-weight: 650; color: var(--orange-ink); }
+.thankyou__heading {
+  font-family: var(--font-head);
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 750;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+  color: var(--navy);
+}
+.thankyou__body { font-size: 15.5px; line-height: 1.55; color: var(--muted); }
+.thankyou__countdown { display: flex; flex-direction: column; gap: 8px; margin-top: 6px; }
+.thankyou__bar { height: 4px; border-radius: 4px; background: var(--tint-strong); overflow: hidden; }
+.thankyou__bar-fill {
+  height: 100%;
+  background: var(--orange);
+  transform-origin: left;
+  animation: thankyou-drain 5s linear forwards;
+}
+@keyframes thankyou-drain { from { transform: scaleX(1); } to { transform: scaleX(0); } }
+.thankyou__timer { font-size: 13px; color: var(--muted); }
+.thankyou__back {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 42px;
+  padding: 0 18px;
+  margin-top: 4px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 650;
+  color: var(--cream);
+  background: var(--navy);
+  cursor: pointer;
+}
+.thankyou__back:focus-visible { outline: 2px solid var(--orange); outline-offset: 3px; }

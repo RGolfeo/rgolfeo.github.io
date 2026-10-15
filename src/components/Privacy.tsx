@@ -25,7 +25,7 @@ export default function Privacy() {
 
         <div className="legal-page__body">
           <h2>Who this covers</h2>
-          <p>This site is run by Ryan Golfeo, a freelance lead generation specialist and virtual assistant based in Pasig City, Philippines. This policy covers rgolfeo.github.io.</p>
+          <p>This site is run by Ryan Golfeo, a freelance virtual assistant based in Pasig City, Philippines. This policy covers rgolfeo.github.io.</p>
 
           <h2>What is collected</h2>
           <p>This site does not use analytics, advertising trackers, or accounts. The contact form opens your own email app, so nothing you type is stored by this site. If you email me, I receive your name, email address, and whatever you choose to share. The site is hosted on GitHub Pages, which may keep standard server logs such as IP addresses. Your light or dark theme choice may be saved in your own browser.</p>

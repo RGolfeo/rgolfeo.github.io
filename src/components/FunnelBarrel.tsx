@@ -301,7 +301,8 @@ export default function FunnelBarrel({ funnels, onOpen }: Props) {
     }
     document.addEventListener('visibilitychange', onVis)
 
-    const clock = new THREE.Clock()
+    // Plain timestamp delta (THREE.Clock is deprecated in recent Three.js).
+    let lastFrame = performance.now()
     let raf = 0
     function kick() {
       if (running) return
@@ -314,7 +315,9 @@ export default function FunnelBarrel({ funnels, onOpen }: Props) {
         return
       }
       raf = requestAnimationFrame(animate)
-      const dt = Math.min(clock.getDelta(), 0.05)
+      const nowMs = performance.now()
+      const dt = Math.min((nowMs - lastFrame) / 1000, 0.05)
+      lastFrame = nowMs
 
       // horizontal: idle spin (slows while the pointer is inside) + parallax + drag
       const idleSpeed = reduce ? 0 : pointerInside ? 0.04 : 0.16

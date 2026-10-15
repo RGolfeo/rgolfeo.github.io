@@ -29,8 +29,16 @@ import { profile } from '@/data/profile'
  * height and Home stays a single viewport.
  */
 
+/* The four tracker pages show their crisp redraw directly; anything else
+   falls back to its small page thumbnail. */
+const SHOT_SVG: Record<string, string> = {
+  'gallery-01.html': '/proof/dashboard.svg',
+  'gallery-02.html': '/proof/pipeline.svg',
+  'gallery-03.html': '/proof/linkedin.svg',
+  'gallery-04.html': '/proof/sales-navigator.svg',
+}
 const thumbSrc = (f: Funnel) =>
-  `/home/${f.dir ?? 'funnels'}-${f.file.replace('.html', '.jpeg')}`
+  SHOT_SVG[f.file] ?? `/home/${f.dir ?? 'funnels'}-${f.file.replace('.html', '.jpeg')}`
 
 const PROJECT_SHOTS = [gymFunnel[0], bookingFunnel[0], websiteFunnel[0], gymFunnel[1]].filter(Boolean)
 
