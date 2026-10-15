@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
-import { ArrowUpRight } from '@/components/slab'
+import { ArrowUpRight, CalendarCheck } from '@/components/slab'
+import { callHref, callIsExternal } from '@/lib/booking'
 import { profile } from '@/data/profile'
 import ToolsMarquee from './ToolsMarquee'
 import HomeBento from './HomeBento'
@@ -44,16 +45,29 @@ export default function Home() {
               <span className="home__half">{displayName.line2}</span>
             </span>
           </h1>
-
-          {!phone && (
-            <Link className="home__cta" to="/contact">
-              Get in touch
-              <ArrowUpRight size={16} weight="bold" aria-hidden="true" />
-            </Link>
-          )}
         </div>
 
-        <p className="home__lede">{hero.body}</p>
+        {/* The lede and the two actions share one row under the headline, so
+            the headline gets the full width of the panel. */}
+        <div className="home__sub">
+          <p className="home__lede">{hero.body}</p>
+          {!phone && (
+            <div className="home__ctas">
+              <a
+                className="home__cta home__cta--primary"
+                href={callHref()}
+                {...(callIsExternal() ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              >
+                <CalendarCheck size={16} weight="bold" aria-hidden="true" />
+                Book a call
+              </a>
+              <Link className="home__cta" to="/contact">
+                Get in touch
+                <ArrowUpRight size={16} weight="bold" aria-hidden="true" />
+              </Link>
+            </div>
+          )}
+        </div>
         {phone && <HomeStats />}
       </div>
 

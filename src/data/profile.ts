@@ -65,7 +65,7 @@ export const profile: Profile = {
   // Keep it short: two halves, 5-8 words total.
   displayName: { line1: 'You grow the business.', line2: 'I keep it moving.' },
   hero: {
-    body: 'Virtual assistant for founders and lean US teams: lead generation, outreach, CRM upkeep, healthcare admin, and everyday support, backed by seven years of US client work.',
+    body: 'Your remote right hand for lead generation, outreach, CRM, and the admin that slows you down. Seven years with US clients, working your hours.',
     portraitSrc: '/avatar.webp',
     portraitAlt: 'Ryan Golfeo in a professional workspace',
   },

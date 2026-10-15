@@ -86,15 +86,32 @@ h2,
    tracking (measured in the preview run). The intro's copy must match. */
 @media (min-width: 1100px) {
   :root { --headline-em-desk: 18.6; }
-  .home__headline { align-items: center; }
   .home__title,
   .boot__title {
     font-size: min(
-      clamp(30px, 3.6vw, 66px),
-      calc((100vw - var(--rail-w) - 2 * var(--panel-x) - 230px) / var(--headline-em-desk))
+      clamp(30px, 4vw, 70px),
+      calc((100vw - var(--rail-w) - 2 * var(--panel-x) - 8px) / var(--headline-em-desk))
     );
   }
 }
+
+/* Lede on the left, the two actions on the right, under the headline. */
+.home__sub {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px 40px;
+  flex-wrap: wrap;
+}
+.home__sub .home__lede { flex: 1 1 420px; max-width: 62ch; }
+.home__ctas { display: flex; gap: 10px; flex: 0 0 auto; }
+.home__cta--primary {
+  background: var(--orange);
+  color: #0B1120;
+  box-shadow: 0 14px 30px -16px rgba(255, 122, 26, 0.85);
+}
+.home__cta--primary svg { color: #0B1120; }
+.home__cta--primary:hover { background: var(--orange-hover); }
 /* Below the shell the line breaks after its first half, so each half gets
    its own row and the size comes from the longer half (~10em). */
 @media (max-width: 1099px) {
