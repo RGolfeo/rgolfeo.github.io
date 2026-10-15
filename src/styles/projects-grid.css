@@ -24,8 +24,8 @@
 .pgrid__eyebrow {
   font-size: var(--fs-eyebrow);
   font-weight: 600;
-  letter-spacing: var(--ls-eyebrow);
-  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  text-transform: none;
   color: var(--orange-ink);
 }
 .pgrid__title {
@@ -62,8 +62,8 @@
   border-radius: var(--radius-pill);
   font-size: 11.5px;
   font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  text-transform: none;
   color: var(--navy);
   background: var(--paper);
   box-shadow:
@@ -130,7 +130,7 @@
   box-shadow: inset 0 0 0 1px var(--line);
   overflow: hidden;
 }
-.bento__doc-eyebrow { font-size: 9px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange-ink); }
+.bento__doc-eyebrow { font-size: 9px; font-weight: 600; letter-spacing: 0.005em; text-transform: none; color: var(--orange-ink); }
 .bento__doc-title { font-size: clamp(13px, 0.9vw, 15px); font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; color: var(--navy); }
 .bento__doc-flow { display: flex; align-items: center; gap: 6px; margin-top: 2px; }
 .bento__doc-flow i {
@@ -174,7 +174,7 @@
   color: var(--orange);
 }
 .bento__build-text { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
-.bento__kicker { font-size: 8.5px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange-ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bento__kicker { font-size: 8.5px; font-weight: 700; letter-spacing: 0.005em; text-transform: none; color: var(--orange-ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .bento__build-title { font-size: clamp(12px, 0.85vw, 14px); font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; color: var(--navy); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .bento__build-desc {
   font-size: clamp(9.5px, 0.62vw, 11px);
@@ -454,10 +454,10 @@
   color: #EDF0F6;
 }
 .aig__head-text { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
-.aig__eyebrow { font-size: var(--fs-eyebrow); font-weight: 600; letter-spacing: var(--ls-eyebrow); text-transform: uppercase; color: #FF9A4D; }
+.aig__eyebrow { font-size: var(--fs-eyebrow); font-weight: 600; letter-spacing: 0.005em; text-transform: none; color: #FF9A4D; }
 .aig__title { font-size: clamp(18px, 1.5vw, 26px); font-weight: 700; letter-spacing: -0.015em; line-height: 1.2; max-width: 34ch; }
 .aig__harness { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
-.aig__harness-label { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(237, 240, 246, 0.6); margin-right: 4px; }
+.aig__harness-label { font-size: 11px; font-weight: 600; letter-spacing: 0.005em; text-transform: none; color: rgba(237, 240, 246, 0.6); margin-right: 4px; }
 .aig__harness-item {
   display: inline-flex;
   align-items: center;
@@ -516,8 +516,8 @@
   border-radius: var(--radius-pill);
   font-size: 9.5px;
   font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  text-transform: none;
   background: var(--tint);
   color: var(--muted);
 }

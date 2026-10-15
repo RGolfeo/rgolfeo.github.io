@@ -51,17 +51,14 @@ const GWS = '/icons/googleworkspace.svg'
 const CLAUDE = '/icons/ai/claude-color.svg'
 const OUTLOOK = '/icons/outlook.svg'
 
-const WF_SHOTS = ['project-1.jpg', 'project-2.jpg', 'project-3.jpg', 'project-4.jpg'].map(
-  (f) => `/placeholders/${f}`,
-)
+const WF_SHOTS = ['dashboard', 'pipeline', 'linkedin', 'sales-navigator'].map((f) => `/proof/${f}.svg`)
 
 const FUNNEL_SHOTS = [gymFunnel[0], bookingFunnel[0], websiteFunnel[0]].filter(Boolean)
 const thumbSrc = (f: Funnel) => `/${f.dir ?? 'funnels'}/thumbs/${f.file.replace('.html', '.jpeg')}`
 
 const APP_SHOTS = [
   ...mobileApps.map((a) => a.imageSrc).filter((s): s is string => !!s),
-  '/placeholders/extension-1.jpg',
-  '/placeholders/extension-2.jpg',
+  '/proof/sales-navigator.svg',
 ]
 
 /** The three featured pieces: each its own card in the stack, each its own

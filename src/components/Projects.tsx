@@ -1,7 +1,6 @@
 import { Key, Browser, type Icon } from '@/components/slab'
 import { mobileApps, type AppProject } from '@/data/projects'
 import AIStack from '@/components/AIStack'
-import Flagship from '@/components/Flagship'
 
 /* Browser extensions - small Chrome tools, shown as a compact two-up block
    inside this same section (not a new section of their own). */
@@ -17,14 +16,14 @@ const EXTENSIONS: Extension[] = [
   {
     name: 'Sales Navigator research',
     desc: 'Filter-driven research by title, seniority, geography, and industry before any connection request goes out.',
-    imageSrc: '/placeholders/extension-1.jpg',
+    imageSrc: '/proof/sales-navigator.svg',
     imageAlt: 'Blurred Sales Navigator research screen',
     Icon: Key,
   },
   {
     name: 'Lead-generation dashboard',
     desc: 'Pipeline health in one view: lead stages, source mix, daily targets, and next actions.',
-    imageSrc: '/placeholders/extension-2.jpg',
+    imageSrc: '/proof/dashboard.svg',
     imageAlt: 'Blurred lead-generation dashboard',
     Icon: Browser,
   },
@@ -176,7 +175,6 @@ export default function Projects() {
     <>
       <AIStackSection />
       <AppsSection />
-      <Flagship />
     </>
   )
 }

@@ -58,6 +58,8 @@ const frag = `
   uniform float uMousePace;   // [0, ~1] eased mouse velocity
   uniform float uAspect;      // viewport.width / viewport.height
   uniform float uDarkMix;     // 0 = light/cream, 1 = dark/navy
+  uniform float uLantern;     // 0 until the pointer first moves, then 1
+  uniform vec3  uPulse;       // xy = origin in aspect UV space, z = age 0..1
   varying vec2 vUv;
   ${noiseGLSL}
 
@@ -121,15 +123,33 @@ const frag = `
     vec3 bg      = mix(bgLight, bgDark, uDarkMix);
     vec3 lineCol = mix(lineLight, lineDark, uDarkMix);
 
-    // Tiny cursor-velocity highlight so flicks leave a faint glow.
+    // ---- Ryan's layer: the map lights up where the work is happening ----
+    // Warm patches: a very slow, very large noise field that tints the
+    // contours brand orange as it drifts, so the map is never one flat grey.
+    float warm = 0.5 + 0.5 * snoise(vec3(uv * 0.32 + vec2(7.3, 2.1), uTime * 0.55));
+    warm = smoothstep(0.58, 0.92, warm);
+
+    // Lantern: the contours near the pointer brighten and turn orange, the
+    // way a lit map reads under a lamp. Soft and wide, always on.
+    float lantern = 1.0 - smoothstep(0.0, 0.42, distance(mouse, uv));
+    lantern *= lantern * uLantern;
+
+    // Ping: every few seconds a ring spreads from one point of the map, like
+    // a new lead coming in, and lights each contour as it passes.
+    float age  = uPulse.z;
+    float ring = abs(distance(uPulse.xy, uv) - age * 0.95);
+    float ping = (1.0 - smoothstep(0.0, 0.045, ring)) * (1.0 - age) * step(0.0001, age) * step(age, 0.9999);
+
+    vec3 orange = vec3(1.0, 0.478, 0.102);
+    float lit   = clamp(warm * 0.6 + lantern * 0.85 + ping, 0.0, 1.0);
+    lineCol = mix(lineCol, orange, lit);
     lineCol += cursor * 0.04;
 
-    // Line opacity: soft, tonal beige hairlines - lower alpha so
-    // the contours read as a warm beige tint rather than stark black. The lower
-    // contrast also hides most of the half-res upscale aliasing. Dark sections
-    // use white lines on navy, kept legible at a similar low alpha.
-    float lineAlpha = line * mix(0.55, 0.45, uDarkMix);
-    vec3 color = mix(bg, lineCol, lineAlpha);
+    // Line opacity: soft tonal hairlines, a touch stronger where lit.
+    float lineAlpha = line * (mix(0.50, 0.40, uDarkMix) + lantern * 0.30 + ping * 0.45 + warm * 0.08);
+    vec3 color = mix(bg, lineCol, clamp(lineAlpha, 0.0, 0.95));
+    // A faint ember glow under the lantern so the light has a source.
+    color = mix(color, orange, lantern * mix(0.035, 0.06, uDarkMix));
 
     gl_FragColor = vec4(color, 1.0);
   }
@@ -200,17 +220,24 @@ export default function HeroCanvasV2() {
         uMousePace: { value: 0 },
         uAspect:    { value: window.innerWidth / window.innerHeight },
         uDarkMix:   darkMix,
+        uPulse:     { value: new THREE.Vector3(0, 0, 0) },
+        uLantern:   { value: 0 },
       },
     })
     const mesh = new THREE.Mesh(geo, mat)
     scene.add(mesh)
 
     let tgt = { x: 0, y: 0 }, cur = { x: 0, y: 0 }
+    let lanternTarget = 0
     const onMove = (e: MouseEvent) => {
+      lanternTarget = 1
       tgt.x = (e.clientX / window.innerWidth) * 2 - 1
       tgt.y = -(e.clientY / window.innerHeight) * 2 + 1
     }
     window.addEventListener('mousemove', onMove)
+    // The lantern goes out when the pointer leaves the window.
+    const onOut = (e: MouseEvent) => { if (!e.relatedTarget) lanternTarget = 0 }
+    document.addEventListener('mouseout', onOut)
 
     const onResize = () => {
       renderer.setSize(window.innerWidth, window.innerHeight)
@@ -248,6 +275,9 @@ export default function HeroCanvasV2() {
     const PACE_PER_SECOND   = 8.0   // velocity smoothing rate
     const DARK_PER_SECOND   = 7.0   // light/dark theme blend rate
 
+    const PING_SECONDS = 2.6
+    let pingWait = 2.5
+
     let lastCurX = 0, lastCurY = 0
     let pace = 0
 
@@ -281,6 +311,22 @@ export default function HeroCanvasV2() {
       const darkK = 1 - Math.exp(-DARK_PER_SECOND * dt)
       darkMix.value += (targetDark - darkMix.value) * darkK
 
+      // Ping scheduler: one ring every ~7s, from a random point in the
+      // visible map, lasting PING_SECONDS.
+      pingWait -= dt
+      const pulse = mat.uniforms.uPulse.value as THREE.Vector3
+      if (pulse.z > 0) {
+        pulse.z = Math.min(1, pulse.z + dt / PING_SECONDS)
+        if (pulse.z >= 1) pulse.z = 0
+      } else if (pingWait <= 0) {
+        const aspect = mat.uniforms.uAspect.value as number
+        pulse.set((0.15 + Math.random() * 0.7) * aspect, 0.15 + Math.random() * 0.7, 0.0001)
+        pingWait = 6 + Math.random() * 3
+      }
+
+      const lan = mat.uniforms.uLantern
+      lan.value += (lanternTarget - lan.value) * (1 - Math.exp(-2.5 * dt))
+
       mat.uniforms.uTime.value      = time
       mat.uniforms.uMousePace.value = pace
       renderer.render(scene, cam)
@@ -291,6 +337,7 @@ export default function HeroCanvasV2() {
       cancelAnimationFrame(raf)
       document.removeEventListener('visibilitychange', onVisibility)
       window.removeEventListener('mousemove', onMove)
+      document.removeEventListener('mouseout', onOut)
       window.removeEventListener('themechange', onThemeChange)
       window.removeEventListener('resize', onResize)
       renderer.dispose()

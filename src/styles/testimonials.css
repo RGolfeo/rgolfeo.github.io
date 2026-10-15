@@ -17,8 +17,8 @@
 .reviews__eyebrow {
   font-size: var(--fs-eyebrow);
   font-weight: 600;
-  letter-spacing: var(--ls-eyebrow);
-  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  text-transform: none;
   color: var(--orange-ink);
 }
 .reviews__headline {

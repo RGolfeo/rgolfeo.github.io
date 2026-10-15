@@ -4,7 +4,7 @@ import { chromium } from 'playwright'
 import { mkdirSync, writeFileSync } from 'node:fs'
 
 const BASE = process.env.BASE || 'http://localhost:4173'
-const ROUTES = (process.env.ROUTES || '/,/projects,/services,/showcase,/testimonials,/about,/contact,/privacy,/terms,/thank-you,/missing-page').split(',')
+const ROUTES = (process.env.ROUTES || '/,/projects,/services,/showcase,/track-record,/about,/contact,/privacy,/terms,/thank-you,/missing-page').split(',')
 mkdirSync('shots', { recursive: true })
 const log = []
 
@@ -35,13 +35,32 @@ for (const v of VIEWS) {
     await page.goto(BASE + r, { waitUntil: 'networkidle' })
     await page.waitForTimeout(1200)
     const name = (r === '/' ? 'home' : r.slice(1)).replace(/\//g, '_')
-    await page.screenshot({ path: `shots/${v.tag}-${name}.png` })
+    await page.screenshot({ path: `shots/${v.tag}-${name}.png`, fullPage: !!v.mobile })
+    // Text that is cut off with an ellipsis, or anything poking past the right edge.
+    const issues = await page.evaluate(() => {
+      const out = []
+      for (const el of document.querySelectorAll('body *')) {
+        const cs = getComputedStyle(el)
+        if (cs.display === 'none' || cs.visibility === 'hidden') continue
+        const r = el.getBoundingClientRect()
+        if (!r.width || !r.height) continue
+        const label = (el.className && typeof el.className === 'string' ? '.' + el.className.split(' ')[0] : el.tagName) + ' "' + (el.textContent || '').trim().slice(0, 40) + '"'
+        if (cs.textOverflow === 'ellipsis' && el.scrollWidth > el.clientWidth + 1) out.push('clipped ' + label)
+        const marquee = el.closest('[class*="marquee"],[class*="track"],[class*="reel"],[class*="barrel"],[class*="chip-row"],.htiles,.hsec,.boot,[aria-hidden="true"]')
+        if (!marquee && r.right > innerWidth + 2 && r.left < innerWidth) out.push('overflow-x ' + label + ' right=' + Math.round(r.right))
+      }
+      const t = document.querySelector('.home__title')
+      if (t) out.push(`headline font ${getComputedStyle(t).fontSize} width ${Math.round(t.getBoundingClientRect().width)} scroll ${t.scrollWidth} line-em ${(t.querySelector('.home__line')?.scrollWidth / parseFloat(getComputedStyle(t).fontSize)).toFixed(2)}`)
+      out.push('fonts ' + [...document.fonts].filter((f) => f.status === 'loaded').map((f) => f.family + ' ' + f.weight).join(', '))
+      return out.slice(0, 25)
+    })
+    for (const i of issues) log.push(`[${v.tag} ${r}] ${i}`)
     // Full scroll height of the panel, for pages that scroll.
     const tall = await page.evaluate(() => {
       const p = document.getElementById('main') || document.querySelector('.shell__panel')
       return p ? p.scrollHeight > p.clientHeight + 40 : document.body.scrollHeight > innerHeight + 40
     })
-    if (tall) {
+    if (tall && !v.mobile) {
       const steps = await page.evaluate(() => {
         const p = document.querySelector('.shell__panel')
         const el = p && p.scrollHeight > p.clientHeight ? p : document.scrollingElement
@@ -62,6 +81,35 @@ for (const v of VIEWS) {
   await ctx.close()
 }
 
+// Proof redraws on their own, and fresh gallery thumbnails from the built pages.
+{
+  const page = await browser.newPage({ viewport: { width: 1200, height: 760 } })
+  for (const f of ['dashboard', 'linkedin', 'pipeline', 'sales-navigator']) {
+    await page.goto(`${BASE}/proof/${f}.svg`)
+    await page.screenshot({ path: `shots/proof-${f}.png` })
+  }
+  await page.close()
+  if (process.env.THUMBS) {
+    const { pathToFileURL } = await import('node:url')
+    const og = await browser.newPage({ viewport: { width: 1200, height: 630 } })
+    await og.goto(pathToFileURL(process.cwd() + '/scripts/og/card.html').href, { waitUntil: 'networkidle' })
+    await og.evaluate(() => document.fonts.ready)
+    await og.screenshot({ path: 'public/og-image.jpg', type: 'jpeg', quality: 88 })
+    await og.screenshot({ path: 'shots/og-image.png' })
+    await og.close()
+    const { readdirSync } = await import('node:fs')
+    for (const f of readdirSync('public/samples').filter((x) => x.startsWith('gallery-') && x.endsWith('.html'))) {
+      const base = f.replace('.html', '')
+      for (const [out, scale] of [[`public/samples/thumbs/${base}.jpeg`, 1], [`public/home/samples-${base}.jpeg`, 400 / 1080]]) {
+        const p = await browser.newPage({ viewport: { width: 1080, height: 1440 }, deviceScaleFactor: scale })
+        await p.goto(`${BASE}/samples/${f}`, { waitUntil: 'networkidle' })
+        await p.screenshot({ path: out, type: 'jpeg', quality: 86 })
+        await p.close()
+      }
+    }
+  }
+}
+
 // One run with motion on, to see the intro hand-off and the live background.
 const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, colorScheme: 'light' })
 const page = await ctx.newPage()
@@ -70,6 +118,13 @@ for (const t of [600, 1800, 3200, 7000]) {
   await page.waitForTimeout(t === 600 ? 600 : t - [600, 1800, 3200, 7000][[600, 1800, 3200, 7000].indexOf(t) - 1])
   await page.screenshot({ path: `shots/motion-${t}.png` })
 }
+await page.mouse.move(900, 300)
+await page.mouse.move(1000, 420, { steps: 12 })
+await page.waitForTimeout(2500)
+await page.screenshot({ path: 'shots/motion-lantern.png' })
+await page.goto(BASE + '/services', { waitUntil: 'networkidle' })
+await page.waitForTimeout(5000)
+await page.screenshot({ path: 'shots/motion-services.png' })
 await page.emulateMedia({ colorScheme: 'dark' })
 await page.reload({ waitUntil: 'networkidle' })
 await page.waitForTimeout(7000)

@@ -27,7 +27,15 @@ jobs:
         run: |
           npx vite preview --port 4173 --strictPort &
           npx --yes wait-on@8 http://localhost:4173 -t 60000
-          node scripts/shoot.mjs
+          THUMBS=1 node scripts/shoot.mjs
+      # Gallery thumbnails are re-rendered from the built pages; keep them.
+      - name: Commit refreshed thumbnails
+        run: |
+          git add public/samples/thumbs public/home public/og-image.jpg
+          if ! git diff --cached --quiet; then
+            git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -m "Refresh gallery thumbnails"
+            git push origin HEAD:${GITHUB_REF_NAME}
+          fi
       # Screenshots go to a throwaway orphan branch so they can be fetched with git.
       - name: Publish screenshots
         if: always()

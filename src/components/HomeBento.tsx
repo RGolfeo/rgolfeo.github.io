@@ -35,21 +35,22 @@ const thumbSrc = (f: Funnel) =>
 const PROJECT_SHOTS = [gymFunnel[0], bookingFunnel[0], websiteFunnel[0], gymFunnel[1]].filter(Boolean)
 
 const OFFERS = [
-  { Icon: FunnelSimple, title: 'Qualified lead sourcing', note: 'Targeted, decision-maker-fit prospect lists' },
-  { Icon: Gear, title: 'LinkedIn & email outreach', note: 'Conversations that get sent, not stuck' },
-  { Icon: AddressBook, title: 'CRM & tracker upkeep', note: 'Clean records and visible next steps' },
-  { Icon: Globe, title: 'Calendar & inbox support', note: 'Follow-ups surfaced, priorities protected' },
-  { Icon: AppWindow, title: 'Operations follow-through', note: 'Reporting and handoffs that hold' },
+  { Icon: FunnelSimple, title: 'Lead generation', note: 'Verified, fit-checked prospect lists' },
+  { Icon: Gear, title: 'Outreach', note: 'LinkedIn and email that gets replies' },
+  { Icon: AddressBook, title: 'CRM & reporting', note: 'Clean records, clear next steps' },
+  { Icon: Globe, title: 'Healthcare admin', note: 'Credentialing records and follow-ups' },
+  { Icon: AppWindow, title: 'Admin & support', note: 'Inbox, calendar, customer replies' },
 ] as const
 
 const CLIENTS: { name: string; role: string; work: string; logo?: string }[] = [
-  { name: 'Healthcare Credentialing Firm', role: 'Lead Generation VA (2026 - present)', work: 'Prospect research · LinkedIn · Email outreach' },
-  { name: 'Growth & Outreach Projects', role: 'Growth & Outreach Specialist (2026)', work: 'Lead gen · CRM · Follow-up' },
-  { name: 'Cognizant', role: 'Senior Process Executive (2024 - 2025)', work: 'Financial operations · Documentation · Client support' },
+  { name: 'Healthcare credentialing firm', role: 'Lead generation VA, 2026 to now', work: 'Prospect research, outreach, credentialing support' },
+  { name: 'Growth & outreach projects', role: 'Outreach specialist, 2026', work: 'Lead generation, CRM, follow-up' },
+  { name: 'Cognizant', role: 'Senior process executive, 2024 to 2025', work: 'Financial operations and documentation' },
+  { name: 'TaskUs, Verizon, Sutherland', role: 'Customer support, 2018 to 2024', work: 'Billing, accounts, refunds, tech support' },
 ]
 
 // Three photos of you, fanned. Small copies are fine - the fan shows them under 100px.
-const PHOTOS = [profile.avatarSrc, '/proof/dashboard.webp', '/proof/linkedin.webp']
+const PHOTOS = [profile.avatarSrc, '/proof/dashboard.svg', '/proof/linkedin.svg']
 
 /** The AI systems as a flat list: every leaf of the Projects tree, in order. */
 const leaves = (n: StackNode): StackNode[] =>
@@ -87,7 +88,7 @@ export default function HomeBento() {
     <nav className="bento" aria-label="Explore the portfolio">
       {/* Projects: the funnel thumbnails drift upward on a looped track. */}
       <Link to="/projects" className="bento__card bento__card--projects">
-        <CardHead Icon={FolderOpen} title="Projects" desc="Sanitized lead-generation systems from real client work." />
+        <CardHead Icon={FolderOpen} title="Projects" desc="Real client systems, with private details hidden." />
         <div className="bento__media bento__reel" aria-hidden="true">
           <div className="bento__reel-track">
             {[...PROJECT_SHOTS, ...PROJECT_SHOTS].map((f, i) => (
@@ -101,7 +102,7 @@ export default function HomeBento() {
 
       {/* About: a fanned stack of photos. */}
       <Link to="/about" className="bento__card bento__card--about">
-        <CardHead Icon={User} title="About" desc="BPO-trained, US-hours friendly, and built on follow-through." />
+        <CardHead Icon={User} title="About" desc="Seven years of US client work, now freelance. Works US hours." />
         <div className="bento__media bento__fan" aria-hidden="true">
           {PHOTOS.map((src, i) => (
             <span key={src} className="bento__photo" style={{ ['--i' as string]: i }}>
@@ -133,7 +134,7 @@ export default function HomeBento() {
 
       {/* Credentials: the badge that matters, on its plate. */}
       <Link to="/about" className="bento__card bento__card--creds">
-        <CardHead Icon={Medal} title="Credentials" desc="7+ years of client-facing work across four BPO and ops roles." />
+        <CardHead Icon={Medal} title="Experience" desc="7+ years of US client-facing work across four BPO and ops roles." />
         <div className="bento__media bento__badge" aria-hidden="true">
           <span className="bento__badge-ring">
             <img src="/badge-experience.svg" alt="" width={72} height={72} />
@@ -147,7 +148,7 @@ export default function HomeBento() {
 
       {/* Services: the five offers as a compact index. */}
       <Link to="/services" className="bento__card bento__card--services">
-        <CardHead Icon={Stack} title="Services" desc="Growth and admin support for founders and lean US teams." />
+        <CardHead Icon={Stack} title="Services" desc="Growth work and day-to-day support for lean US teams." />
         <ul className="bento__media bento__offers" role="list">
           {OFFERS.map(({ Icon, title, note }, i) => (
             <li key={title} className="bento__offer" style={{ '--i': i } as React.CSSProperties}>
@@ -166,9 +167,9 @@ export default function HomeBento() {
         </ul>
       </Link>
 
-      {/* Testimonials: client cards drifting up a clipped column. */}
-      <Link to="/testimonials" className="bento__card bento__card--quotes">
-        <CardHead Icon={Quotes} title="Testimonials" desc="Where I have done the work, and what I did there." />
+      {/* Track record: where the work happened, drifting up a clipped column. */}
+      <Link to="/track-record" className="bento__card bento__card--quotes">
+        <CardHead Icon={Quotes} title="Track record" desc="Where I have done the work, and what I did there." />
         <div className="bento__media bento__reviews" aria-hidden="true">
           <div className="bento__reviews-track">
             {[...CLIENTS, ...CLIENTS].map((c, i) => (

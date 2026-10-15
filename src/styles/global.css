@@ -1,10 +1,6 @@
-/* Fontsource Poppins - self-hosted, latin subset only (drops devanagari and
-   latin-ext to keep the bundle small). Weights 400 / 500 / 600 / 700 match
-   the four that actually render on this site. */
-@import '@fontsource/poppins/latin-400.css';
-@import '@fontsource/poppins/latin-500.css';
-@import '@fontsource/poppins/latin-600.css';
-@import '@fontsource/poppins/latin-700.css';
+/* Typefaces load in polish.css (Figtree for text, Bricolage Grotesque for
+   headings). Poppins stays installed but is no longer loaded.
+   */
 
 /* Reset */
 *, *::before, *::after {
@@ -470,8 +466,8 @@ main > * {
 .cursor-ring__label {
   font-size: 11px;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  text-transform: none;
+  letter-spacing: 0.005em;
   /* Raw #000 is correct here, not a palette violation: it is a blend-math
      operand. Under difference, black-on-white-disc inverts to light text
      on a dark disc over cream, dark text on a light disc over navy-ink. */

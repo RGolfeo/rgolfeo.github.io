@@ -203,8 +203,8 @@
   display: block;
   font-size: var(--fs-eyebrow);
   font-weight: 500;
-  letter-spacing: var(--ls-eyebrow);
-  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  text-transform: none;
   color: var(--orange-ink);
   margin-bottom: 16px;
 }
@@ -566,8 +566,8 @@
   display: block;
   font-size: var(--fs-eyebrow);
   font-weight: 500;
-  letter-spacing: var(--ls-eyebrow);
-  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  text-transform: none;
   color: var(--orange);
   margin-bottom: 20px;
 }
@@ -733,8 +733,8 @@
   padding: 6px 13px;
   font-size: 12px;
   font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  text-transform: none;
   white-space: nowrap;
   color: color-mix(in srgb, var(--cream) 80%, transparent);
   background: color-mix(in srgb, var(--white) 7%, transparent);
@@ -791,8 +791,8 @@
   display: block;
   font-size: var(--fs-eyebrow);
   font-weight: 500;
-  letter-spacing: var(--ls-eyebrow);
-  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  text-transform: none;
   color: var(--orange-ink);
 }
 
@@ -1006,8 +1006,8 @@
   padding: 8px 16px;
   font-size: 12px;
   font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  text-transform: none;
   color: var(--tag-color, var(--orange));
   background: color-mix(in srgb, var(--tag-color, var(--orange)) 14%, transparent);
   border: 1px solid color-mix(in srgb, var(--tag-color, var(--orange)) 45%, transparent);
@@ -1097,8 +1097,8 @@
 .funnels__flow-label {
   font-size: 10px;
   font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  text-transform: none;
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -1129,8 +1129,8 @@
   color: color-mix(in srgb, var(--tag-color, var(--orange)) 90%, var(--white));
   font-size: 9.5px;
   font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  text-transform: none;
   line-height: 1;
   transition:
     background var(--dur-fast) var(--ease-out),
@@ -1173,8 +1173,8 @@
 .funnels__thumbs-label {
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  text-transform: none;
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -1445,8 +1445,8 @@
   display: block;
   font-size: var(--fs-eyebrow);
   font-weight: 500;
-  letter-spacing: var(--ls-eyebrow);
-  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  text-transform: none;
   color: var(--orange);
   margin-bottom: 24px;
 }
@@ -1515,8 +1515,8 @@
   display: block;
   font-size: var(--fs-eyebrow);
   font-weight: 500;
-  letter-spacing: var(--ls-eyebrow);
-  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  text-transform: none;
   color: var(--orange);
 }
 
@@ -1657,8 +1657,8 @@
   display: block;
   font-size: var(--fs-eyebrow);
   font-weight: 500;
-  letter-spacing: var(--ls-eyebrow);
-  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  text-transform: none;
   color: var(--orange-ink);
 }
 
@@ -1819,8 +1819,8 @@
   display: block;
   font-size: var(--fs-eyebrow);
   font-weight: 500;
-  letter-spacing: var(--ls-eyebrow);
-  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  text-transform: none;
   color: var(--orange-ink);
 }
 
@@ -1995,8 +1995,8 @@
 .projects__empty-label {
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  text-transform: none;
   color: rgba(11, 30, 63, 0.3);
 }
 
@@ -2019,8 +2019,8 @@
   margin-bottom: 20px;
   font-size: var(--fs-eyebrow);
   font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  text-transform: none;
   color: var(--muted);
 }
 .ext-grid {
@@ -2297,8 +2297,8 @@
   border-radius: var(--radius-pill);
   font-size: 10.5px;
   font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  text-transform: none;
   color: var(--white);
   background: color-mix(in srgb, var(--app-color) 92%, var(--navy));
   box-shadow: 0 4px 12px -4px color-mix(in srgb, var(--app-color) 70%, transparent);
@@ -2371,8 +2371,8 @@
   font-size: 10px;
   font-weight: 500;
   color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
+  text-transform: none;
+  letter-spacing: 0.005em;
   line-height: 1;
 }
 
@@ -2429,8 +2429,8 @@
   display: block;
   font-size: var(--fs-eyebrow);
   font-weight: 500;
-  letter-spacing: var(--ls-eyebrow);
-  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  text-transform: none;
   color: var(--orange-ink);
 }
 
@@ -2543,8 +2543,8 @@
 .ghlwf__code-lang {
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  text-transform: none;
   color: rgba(255, 255, 255, 0.45);
 }
 
@@ -2608,8 +2608,8 @@
 .ghlwf__empty-label {
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  text-transform: none;
   color: rgba(11, 30, 63, 0.3);
 }
 
@@ -3191,8 +3191,8 @@
   display: block;
   font-size: var(--fs-eyebrow);
   font-weight: 500;
-  letter-spacing: var(--ls-eyebrow);
-  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  text-transform: none;
   color: var(--orange);
 }
 
@@ -3366,8 +3366,8 @@ a.brands__card-body:focus-visible {
   margin: 4px 0 0;
   font-size: 12px;
   font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  text-transform: none;
   line-height: 1.4;
   color: var(--muted);
 }
@@ -3399,11 +3399,11 @@ a.brands__card-body:focus-visible {
 .brands__work {
   font-size: var(--fs-eyebrow);
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.005em;
   line-height: 1.5;
   /* reserve two lines so single- and double-line tags occupy equal height */
   min-height: calc(1.5em * 2);
-  text-transform: uppercase;
+  text-transform: none;
   color: var(--muted);
 }
 

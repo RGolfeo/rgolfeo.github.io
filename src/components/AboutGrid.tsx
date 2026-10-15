@@ -35,23 +35,23 @@ type Capability = {
 const CAPABILITIES: Capability[] = [
   {
     index: '01',
-    title: 'Lead sourcing & research',
-    marks: [LINKEDIN, SHEETS, CHATGPT],
+    title: 'Lead generation & outreach',
+    marks: [LINKEDIN, CHATGPT, OUTLOOK, CANVA],
   },
   {
     index: '02',
-    title: 'LinkedIn & email outreach',
-    marks: [LINKEDIN, OUTLOOK, CANVA],
-  },
-  {
-    index: '03',
     title: 'CRM, trackers & reporting',
     marks: [GHL, SHEETS, GWS, CLAUDE],
   },
   {
+    index: '03',
+    title: 'Healthcare admin & credentialing',
+    marks: [SHEETS, OUTLOOK, ZOOM],
+  },
+  {
     index: '04',
-    title: 'Executive & admin support',
-    marks: [OUTLOOK, ZOOM, SLACK, LOOM],
+    title: 'Admin & customer support',
+    marks: [GWS, ZOOM, SLACK, LOOM],
   },
 ]
 
@@ -64,22 +64,22 @@ export default function AboutGrid() {
           {`Hi, I’m ${profile.firstName}.`}
         </h1>
         <p className="pgrid__lede">
-          Lead generation and virtual assistant, based in the Philippines, working US hours.
+          Virtual assistant in Pasig City, Philippines, working US hours.
         </p>
       </header>
 
       <div className="home__glass agrid__glass">
         <div className="agrid__copy">
           <p className="agrid__lead">
-            More than a task list.
-            <span> Reliable support for work that cannot afford to stall.</span>
+            One assistant, many hats.
+            <span> Steady support for the work that keeps a small team moving.</span>
           </p>
 
           <p className="agrid__note">
-            <strong>Seven years in client-facing work</strong> across customer experience,
-          financial operations, and remote support taught me to communicate clearly and stay
-          dependable under pressure. Today I bring that to lead generation and executive support for
-          founders and lean teams.
+            <strong>Seven years of US client work</strong> at Sutherland, Verizon, TaskUs, and Cognizant
+            taught me to communicate clearly, document carefully, and stay calm under pressure. In 2026 I went
+            freelance: I run lead generation for a healthcare credentialing firm and now support its
+            credentialing work too. I learn new tools fast, and I say so when something is new to me.
           </p>
 
           <ul className="agrid__caps" role="list">

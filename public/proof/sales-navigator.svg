@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" font-family="Figtree, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif">
+<title>Sales Navigator search (redrawn, private details hidden)</title>
+<rect x="0" y="0" width="1200" height="760" rx="18" fill="#FFFFFF"/>
+<rect x="0.5" y="0.5" width="1199" height="759" rx="18" fill="none" stroke="#E3E7EE" stroke-width="1"/>
+<rect x="0" y="0" width="1200" height="52" rx="18" fill="#F6F7FA"/>
+<rect x="0" y="34" width="1200" height="18" rx="0" fill="#F6F7FA"/>
+<circle cx="26" cy="26" r="6" fill="#FF5F57"/><circle cx="46" cy="26" r="6" fill="#FEBC2E"/><circle cx="66" cy="26" r="6" fill="#28C840"/>
+<text x="96" y="31" font-size="15" font-weight="650" fill="#1F2A3D" text-anchor="start" >Sales Navigator search</text>
+<rect x="990" y="22" width="120" height="10" rx="5.0" fill="#E4E8EF"/>
+<rect x="1124" y="14" width="52" height="24" rx="12" fill="#188038"/>
+<text x="1150" y="31" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle" >Share</text>
+<line x1="0" y1="52" x2="1200" y2="52" stroke="#E3E7EE"/>
+<rect x="24" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="58" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="92" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="126" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="160" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="194" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="228" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="262" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="296" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="330" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="364" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="398" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="432" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="466" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<line x1="0" y1="90" x2="1200" y2="90" stroke="#E3E7EE"/>
+<rect x="24" y="104" width="330" height="592" rx="12" fill="#FBFCFD" stroke="#E3E7EE" stroke-width="1"/>
+<text x="44" y="134" font-size="15" font-weight="700" fill="#1F2A3D" text-anchor="start" >Lead filters</text>
+<text x="44" y="168" font-size="12.5" font-weight="700" fill="#6B7488" text-anchor="start" >Geography</text>
+<rect x="44" y="182" width="83" height="26" rx="13" fill="#E7F3EC"/>
+<text x="56" y="200" font-size="12" font-weight="650" fill="#188038" text-anchor="start" >+ Georgia</text>
+<rect x="133" y="182" width="69" height="26" rx="13" fill="#E7F3EC"/>
+<text x="145" y="200" font-size="12" font-weight="650" fill="#188038" text-anchor="start" >+ Texas</text>
+<text x="44" y="240" font-size="12.5" font-weight="700" fill="#6B7488" text-anchor="start" >Industry</text>
+<rect x="44" y="254" width="160" height="26" rx="13" fill="#E7F3EC"/>
+<text x="56" y="272" font-size="12" font-weight="650" fill="#188038" text-anchor="start" >+ Mental health care</text>
+<text x="44" y="312" font-size="12.5" font-weight="700" fill="#6B7488" text-anchor="start" >Seniority</text>
+<rect x="44" y="326" width="139" height="26" rx="13" fill="#E7F3EC"/>
+<text x="56" y="344" font-size="12" font-weight="650" fill="#188038" text-anchor="start" >+ Owner / Partner</text>
+<rect x="189" y="326" width="69" height="26" rx="13" fill="#E7F3EC"/>
+<text x="201" y="344" font-size="12" font-weight="650" fill="#188038" text-anchor="start" >+ Entry</text>
+<text x="44" y="384" font-size="12.5" font-weight="700" fill="#6B7488" text-anchor="start" >Years in current role</text>
+<rect x="44" y="398" width="146" height="26" rx="13" fill="#E7F3EC"/>
+<text x="56" y="416" font-size="12" font-weight="650" fill="#188038" text-anchor="start" >+ Less than 1 year</text>
+<text x="44" y="456" font-size="12.5" font-weight="700" fill="#6B7488" text-anchor="start" >Keywords</text>
+<rect x="44" y="470" width="90" height="26" rx="13" fill="#E7F3EC"/>
+<text x="56" y="488" font-size="12" font-weight="650" fill="#188038" text-anchor="start" >+ Licensed</text>
+<rect x="140" y="470" width="146" height="26" rx="13" fill="#E7F3EC"/>
+<text x="152" y="488" font-size="12" font-weight="650" fill="#188038" text-anchor="start" >+ Private practice</text>
+<text x="380" y="134" font-size="15" font-weight="700" fill="#1F2A3D" text-anchor="start" >Search results</text>
+<text x="1156" y="134" font-size="12.5" font-weight="600" fill="#6B7488" text-anchor="end" >Saved to list after review</text>
+<line x1="380" y1="150" x2="1176" y2="150" stroke="#E3E7EE"/>
+<rect x="380" y="168" width="796" height="64" rx="10" fill="#FFFFFF" stroke="#E3E7EE" stroke-width="1"/>
+<circle cx="414" cy="200" r="20" fill="#D5DAE3"/>
+<rect x="448" y="187" width="150" height="10" rx="5.0" fill="#D5DAE3"/>
+<rect x="448" y="209" width="230" height="8" rx="4.0" fill="#E4E8EF"/>
+<text x="760" y="206" font-size="12.5" font-weight="600" fill="#6B7488" text-anchor="start" >Georgia</text>
+<rect x="1060" y="186" width="92" height="28" rx="14" fill="#FFFFFF" stroke="#0A66C2" stroke-width="1"/>
+<text x="1106" y="205" font-size="12.5" font-weight="700" fill="#0A66C2" text-anchor="middle" >Saved</text>
+<rect x="380" y="242" width="796" height="64" rx="10" fill="#FFFFFF" stroke="#E3E7EE" stroke-width="1"/>
+<circle cx="414" cy="274" r="20" fill="#D5DAE3"/>
+<rect x="448" y="261" width="181" height="10" rx="5.0" fill="#D5DAE3"/>
+<rect x="448" y="283" width="211" height="8" rx="4.0" fill="#E4E8EF"/>
+<text x="760" y="280" font-size="12.5" font-weight="600" fill="#6B7488" text-anchor="start" >Texas</text>
+<rect x="1060" y="260" width="92" height="28" rx="14" fill="#FFFFFF" stroke="#0A66C2" stroke-width="1"/>
+<text x="1106" y="279" font-size="12.5" font-weight="700" fill="#0A66C2" text-anchor="middle" >Save</text>
+<rect x="380" y="316" width="796" height="64" rx="10" fill="#FFFFFF" stroke="#E3E7EE" stroke-width="1"/>
+<circle cx="414" cy="348" r="20" fill="#D5DAE3"/>
+<rect x="448" y="335" width="212" height="10" rx="5.0" fill="#D5DAE3"/>
+<rect x="448" y="357" width="192" height="8" rx="4.0" fill="#E4E8EF"/>
+<text x="760" y="354" font-size="12.5" font-weight="600" fill="#6B7488" text-anchor="start" >Georgia</text>
+<rect x="1060" y="334" width="92" height="28" rx="14" fill="#FFFFFF" stroke="#0A66C2" stroke-width="1"/>
+<text x="1106" y="353" font-size="12.5" font-weight="700" fill="#0A66C2" text-anchor="middle" >Saved</text>
+<rect x="380" y="390" width="796" height="64" rx="10" fill="#FFFFFF" stroke="#E3E7EE" stroke-width="1"/>
+<circle cx="414" cy="422" r="20" fill="#D5DAE3"/>
+<rect x="448" y="409" width="173" height="10" rx="5.0" fill="#D5DAE3"/>
+<rect x="448" y="431" width="173" height="8" rx="4.0" fill="#E4E8EF"/>
+<text x="760" y="428" font-size="12.5" font-weight="600" fill="#6B7488" text-anchor="start" >Georgia</text>
+<rect x="1060" y="408" width="92" height="28" rx="14" fill="#FFFFFF" stroke="#0A66C2" stroke-width="1"/>
+<text x="1106" y="427" font-size="12.5" font-weight="700" fill="#0A66C2" text-anchor="middle" >Saved</text>
+<rect x="380" y="464" width="796" height="64" rx="10" fill="#FFFFFF" stroke="#E3E7EE" stroke-width="1"/>
+<circle cx="414" cy="496" r="20" fill="#D5DAE3"/>
+<rect x="448" y="483" width="204" height="10" rx="5.0" fill="#D5DAE3"/>
+<rect x="448" y="505" width="154" height="8" rx="4.0" fill="#E4E8EF"/>
+<text x="760" y="502" font-size="12.5" font-weight="600" fill="#6B7488" text-anchor="start" >Texas</text>
+<rect x="1060" y="482" width="92" height="28" rx="14" fill="#FFFFFF" stroke="#0A66C2" stroke-width="1"/>
+<text x="1106" y="501" font-size="12.5" font-weight="700" fill="#0A66C2" text-anchor="middle" >Save</text>
+<rect x="380" y="538" width="796" height="64" rx="10" fill="#FFFFFF" stroke="#E3E7EE" stroke-width="1"/>
+<circle cx="414" cy="570" r="20" fill="#D5DAE3"/>
+<rect x="448" y="557" width="165" height="10" rx="5.0" fill="#D5DAE3"/>
+<rect x="448" y="579" width="215" height="8" rx="4.0" fill="#E4E8EF"/>
+<text x="760" y="576" font-size="12.5" font-weight="600" fill="#6B7488" text-anchor="start" >Georgia</text>
+<rect x="1060" y="556" width="92" height="28" rx="14" fill="#FFFFFF" stroke="#0A66C2" stroke-width="1"/>
+<text x="1106" y="575" font-size="12.5" font-weight="700" fill="#0A66C2" text-anchor="middle" >Saved</text>
+<rect x="380" y="612" width="796" height="64" rx="10" fill="#FFFFFF" stroke="#E3E7EE" stroke-width="1"/>
+<circle cx="414" cy="644" r="20" fill="#D5DAE3"/>
+<rect x="448" y="631" width="196" height="10" rx="5.0" fill="#D5DAE3"/>
+<rect x="448" y="653" width="196" height="8" rx="4.0" fill="#E4E8EF"/>
+<text x="760" y="650" font-size="12.5" font-weight="600" fill="#6B7488" text-anchor="start" >Georgia</text>
+<rect x="1060" y="630" width="92" height="28" rx="14" fill="#FFFFFF" stroke="#0A66C2" stroke-width="1"/>
+<text x="1106" y="649" font-size="12.5" font-weight="700" fill="#0A66C2" text-anchor="middle" >Save</text>
+<line x1="0" y1="720" x2="1200" y2="720" stroke="#E3E7EE"/>
+<rect x="24" y="726" width="109.4" height="26" rx="6" fill="#E8F0FE"/>
+<text x="78.7" y="744" font-size="12.5" font-weight="700" fill="#0A66C2" text-anchor="middle" >Lead search</text>
+<text x="196.10000000000002" y="744" font-size="12.5" font-weight="550" fill="#6B7488" text-anchor="middle" >Saved lists</text>
+<text x="295.0" y="744" font-size="12.5" font-weight="550" fill="#6B7488" text-anchor="middle" >Alerts</text>
+</svg>

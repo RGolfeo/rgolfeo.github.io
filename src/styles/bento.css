@@ -88,8 +88,8 @@
   font-size: clamp(15px, 1.05vw, 18px);
   font-weight: 700;
   line-height: 1.1;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  text-transform: none;
   color: var(--navy);
   transition: color var(--dur-fast) var(--ease-out);
 }

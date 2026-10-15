@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" font-family="Figtree, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif">
+<title>Lead Generation Tracker (redrawn, private details hidden)</title>
+<rect x="0" y="0" width="1200" height="760" rx="18" fill="#FFFFFF"/>
+<rect x="0.5" y="0.5" width="1199" height="759" rx="18" fill="none" stroke="#E3E7EE" stroke-width="1"/>
+<rect x="0" y="0" width="1200" height="52" rx="18" fill="#F6F7FA"/>
+<rect x="0" y="34" width="1200" height="18" rx="0" fill="#F6F7FA"/>
+<circle cx="26" cy="26" r="6" fill="#FF5F57"/><circle cx="46" cy="26" r="6" fill="#FEBC2E"/><circle cx="66" cy="26" r="6" fill="#28C840"/>
+<text x="96" y="31" font-size="15" font-weight="650" fill="#1F2A3D" text-anchor="start" >Lead Generation Tracker</text>
+<rect x="990" y="22" width="120" height="10" rx="5.0" fill="#E4E8EF"/>
+<rect x="1124" y="14" width="52" height="24" rx="12" fill="#188038"/>
+<text x="1150" y="31" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle" >Share</text>
+<line x1="0" y1="52" x2="1200" y2="52" stroke="#E3E7EE"/>
+<rect x="24" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="58" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="92" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="126" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="160" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="194" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="228" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="262" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="296" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="330" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="364" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="398" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="432" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="466" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<line x1="0" y1="90" x2="1200" y2="90" stroke="#E3E7EE"/>
+<rect x="24" y="104" width="1152" height="40" rx="8" fill="#0B1E3F"/>
+<text x="44" y="130" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="start" >Lead generation dashboard</text>
+<text x="1156" y="130" font-size="13" font-weight="600" fill="#AFC0DA" text-anchor="end" >Healthcare credentialing client</text>
+<rect x="24.0" y="160" width="276.0" height="96" rx="12" fill="#FFFFFF" stroke="#E3E7EE" stroke-width="1"/><rect x="24.0" y="160" width="5" height="96" rx="2" fill="#0A66C2"/><text x="46.0" y="210" font-size="36" font-weight="750" fill="#0B1E3F" text-anchor="start" >287</text><text x="46.0" y="236" font-size="13.5" font-weight="600" fill="#6B7488" text-anchor="start" >Leads tracked</text>
+<rect x="316.0" y="160" width="276.0" height="96" rx="12" fill="#FFFFFF" stroke="#E3E7EE" stroke-width="1"/><rect x="316.0" y="160" width="5" height="96" rx="2" fill="#188038"/><text x="338.0" y="210" font-size="36" font-weight="750" fill="#0B1E3F" text-anchor="start" >170</text><text x="338.0" y="236" font-size="13.5" font-weight="600" fill="#6B7488" text-anchor="start" >Outreach-ready</text>
+<rect x="608.0" y="160" width="276.0" height="96" rx="12" fill="#FFFFFF" stroke="#E3E7EE" stroke-width="1"/><rect x="608.0" y="160" width="5" height="96" rx="2" fill="#FF7A1A"/><text x="630.0" y="210" font-size="36" font-weight="750" fill="#0B1E3F" text-anchor="start" >57</text><text x="630.0" y="236" font-size="13.5" font-weight="600" fill="#6B7488" text-anchor="start" >High priority</text>
+<rect x="900.0" y="160" width="276.0" height="96" rx="12" fill="#FFFFFF" stroke="#E3E7EE" stroke-width="1"/><rect x="900.0" y="160" width="5" height="96" rx="2" fill="#7C3AED"/><text x="922.0" y="210" font-size="36" font-weight="750" fill="#0B1E3F" text-anchor="start" >50</text><text x="922.0" y="236" font-size="13.5" font-weight="600" fill="#6B7488" text-anchor="start" >Connection requests sent</text>
+<rect x="24" y="272" width="560" height="200" rx="12" fill="#FFFFFF" stroke="#E3E7EE" stroke-width="1"/>
+<text x="44" y="302" font-size="14" font-weight="700" fill="#1F2A3D" text-anchor="start" >Prospects by tier (one sourcing batch)</text>
+<text x="44" y="362" font-size="13.5" font-weight="650" fill="#1F2A3D" text-anchor="start" >Tier A</text>
+<rect x="114" y="344" width="390" height="26" rx="6" fill="#EEF1F5"/>
+<rect x="114" y="344" width="390.0" height="26" rx="6" fill="#188038"/>
+<text x="494.0" y="362" font-size="13.5" font-weight="750" fill="#FFFFFF" text-anchor="end" >149</text>
+<text x="44" y="418" font-size="13.5" font-weight="650" fill="#1F2A3D" text-anchor="start" >Tier B</text>
+<rect x="114" y="400" width="390" height="26" rx="6" fill="#EEF1F5"/>
+<rect x="114" y="400" width="204.16107382550337" height="26" rx="6" fill="#F2A100"/>
+<text x="308.16107382550337" y="418" font-size="13.5" font-weight="750" fill="#FFFFFF" text-anchor="end" >78</text>
+<rect x="600" y="272" width="576" height="200" rx="12" fill="#FFFFFF" stroke="#E3E7EE" stroke-width="1"/>
+<text x="620" y="302" font-size="14" font-weight="700" fill="#1F2A3D" text-anchor="start" >Ready for outreach</text>
+<circle cx="710" cy="376" r="62" fill="none" stroke="#EEF1F5" stroke-width="22"/>
+<circle cx="710" cy="376" r="62" fill="none" stroke="#188038" stroke-width="22" stroke-dasharray="230.7 389.6" transform="rotate(-90 710 376)" stroke-linecap="round"/>
+<text x="710" y="385" font-size="26" font-weight="750" fill="#0B1E3F" text-anchor="middle" >59%</text>
+<text x="810" y="358" font-size="14" font-weight="650" fill="#1F2A3D" text-anchor="start" >170 of 287 tracked leads</text>
+<text x="810" y="382" font-size="13.5" font-weight="500" fill="#6B7488" text-anchor="start" >verified and outreach-ready</text>
+<rect x="810" y="404" width="12" height="12" rx="3" fill="#188038"/>
+<text x="830" y="415" font-size="12.5" font-weight="600" fill="#6B7488" text-anchor="start" >Outreach-ready</text>
+<rect x="950" y="404" width="12" height="12" rx="3" fill="#EEF1F5"/>
+<text x="970" y="415" font-size="12.5" font-weight="600" fill="#6B7488" text-anchor="start" >Still verifying</text>
+<rect x="24" y="488" width="1152" height="220" rx="12" fill="#FFFFFF" stroke="#E3E7EE" stroke-width="1"/>
+<text x="44" y="518" font-size="14" font-weight="700" fill="#1F2A3D" text-anchor="start" >Next actions</text>
+<text x="44" y="550" font-size="12" font-weight="700" fill="#6B7488" text-anchor="start" >Prospect</text>
+<text x="300" y="550" font-size="12" font-weight="700" fill="#6B7488" text-anchor="start" >Practice</text>
+<text x="560" y="550" font-size="12" font-weight="700" fill="#6B7488" text-anchor="start" >Stage</text>
+<text x="760" y="550" font-size="12" font-weight="700" fill="#6B7488" text-anchor="start" >Priority</text>
+<text x="920" y="550" font-size="12" font-weight="700" fill="#6B7488" text-anchor="start" >Next step</text>
+<line x1="44" y1="562" x2="1156" y2="562" stroke="#E3E7EE"/>
+<rect x="44" y="581" width="150" height="10" rx="5.0" fill="#D5DAE3"/>
+<rect x="300" y="581" width="170" height="10" rx="5.0" fill="#E4E8EF"/>
+<rect x="560" y="577.5" width="95.28" height="21.5" rx="10.75" fill="#0A66C21F"/><text x="607.64" y="593" font-size="11.5" font-weight="650" fill="#0A66C2" text-anchor="middle" >Request sent</text>
+<rect x="760" y="577.5" width="43.760000000000005" height="21.5" rx="10.75" fill="#FF7A1A1F"/><text x="781.88" y="593" font-size="11.5" font-weight="650" fill="#FF7A1A" text-anchor="middle" >High</text>
+<text x="920" y="592" font-size="13" font-weight="550" fill="#1F2A3D" text-anchor="start" >Follow up Thu</text>
+<rect x="44" y="611" width="173" height="10" rx="5.0" fill="#D5DAE3"/>
+<rect x="300" y="611" width="153" height="10" rx="5.0" fill="#E4E8EF"/>
+<rect x="560" y="607.5" width="75.96000000000001" height="21.5" rx="10.75" fill="#1880381F"/><text x="597.98" y="623" font-size="11.5" font-weight="650" fill="#188038" text-anchor="middle" >Connected</text>
+<rect x="760" y="607.5" width="43.760000000000005" height="21.5" rx="10.75" fill="#FF7A1A1F"/><text x="781.88" y="623" font-size="11.5" font-weight="650" fill="#FF7A1A" text-anchor="middle" >High</text>
+<text x="920" y="622" font-size="13" font-weight="550" fill="#1F2A3D" text-anchor="start" >Send intro email</text>
+<rect x="44" y="641" width="196" height="10" rx="5.0" fill="#D5DAE3"/>
+<rect x="300" y="641" width="136" height="10" rx="5.0" fill="#E4E8EF"/>
+<rect x="560" y="637.5" width="82.4" height="21.5" rx="10.75" fill="#7C3AED1F"/><text x="601.2" y="653" font-size="11.5" font-weight="650" fill="#7C3AED" text-anchor="middle" >Email sent</text>
+<rect x="760" y="637.5" width="56.64" height="21.5" rx="10.75" fill="#F2A1001F"/><text x="788.32" y="653" font-size="11.5" font-weight="650" fill="#F2A100" text-anchor="middle" >Medium</text>
+<text x="920" y="652" font-size="13" font-weight="550" fill="#1F2A3D" text-anchor="start" >Follow up Mon</text>
+<rect x="44" y="671" width="159" height="10" rx="5.0" fill="#D5DAE3"/>
+<rect x="300" y="671" width="169" height="10" rx="5.0" fill="#E4E8EF"/>
+<rect x="560" y="667.5" width="95.28" height="21.5" rx="10.75" fill="#0A66C21F"/><text x="607.64" y="683" font-size="11.5" font-weight="650" fill="#0A66C2" text-anchor="middle" >Request sent</text>
+<rect x="760" y="667.5" width="56.64" height="21.5" rx="10.75" fill="#F2A1001F"/><text x="788.32" y="683" font-size="11.5" font-weight="650" fill="#F2A100" text-anchor="middle" >Medium</text>
+<text x="920" y="682" font-size="13" font-weight="550" fill="#1F2A3D" text-anchor="start" >Wait for accept</text>
+<line x1="0" y1="720" x2="1200" y2="720" stroke="#E3E7EE"/>
+<rect x="24" y="726" width="94.60000000000001" height="26" rx="6" fill="#E8F0FE"/>
+<text x="71.30000000000001" y="744" font-size="12.5" font-weight="700" fill="#0A66C2" text-anchor="middle" >Dashboard</text>
+<text x="170.20000000000002" y="744" font-size="12.5" font-weight="550" fill="#6B7488" text-anchor="middle" >Pipeline</text>
+<text x="265.40000000000003" y="744" font-size="12.5" font-weight="550" fill="#6B7488" text-anchor="middle" >LinkedIn</text>
+<text x="382.8" y="744" font-size="12.5" font-weight="550" fill="#6B7488" text-anchor="middle" >Newly licensed</text>
+<text x="481.70000000000005" y="744" font-size="12.5" font-weight="550" fill="#6B7488" text-anchor="middle" >SOP</text>
+</svg>

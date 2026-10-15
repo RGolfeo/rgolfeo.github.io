@@ -34,8 +34,8 @@
   margin: 0;
   font-size: var(--fs-eyebrow);
   font-weight: 700;
-  letter-spacing: var(--ls-eyebrow);
-  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  text-transform: none;
   color: var(--muted);
 }
 .ktools__vote-dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(255, 122, 26, 0.5); }

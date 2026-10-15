@@ -1,0 +1,312 @@
+/* ============================================
+   POLISH - loaded last.
+
+   1. One type system everywhere. The old stack started with the platform
+      font, so the site was SF Pro on an iPhone, Segoe UI on Windows and
+      Roboto on Android: three different-looking portfolios. Both faces are
+      now self-hosted and render the same on every device.
+        Figtree               text, labels, buttons
+        Bricolage Grotesque   headlines and names (the personality)
+   2. Fixes found in the screenshot pass (overflowing headline CTA, wrapped
+      index labels, the About portrait floating in empty space).
+   ============================================ */
+
+@import '@fontsource-variable/figtree/index.css';
+@import '@fontsource-variable/bricolage-grotesque/index.css';
+
+:root {
+  --font-text: 'Figtree Variable', 'Segoe UI', system-ui, sans-serif;
+  --font-head: 'Bricolage Grotesque Variable', 'Figtree Variable', 'Segoe UI', system-ui, sans-serif;
+  --font-display: var(--font-text);
+}
+
+body {
+  font-family: var(--font-text);
+  font-feature-settings: 'ss01' 0;
+}
+
+/* Buttons and fields do not inherit the font by default. */
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+/* ---------- Headlines ---------- */
+h1,
+h2,
+.home__title,
+.boot__title,
+.pgrid__title,
+.view__title,
+.legal-page__title,
+.rail__name,
+.hprofile__name,
+.hsec__title,
+.htile__title,
+.hstats__value,
+.bento__title,
+.agrid__lead,
+.sgrid__method-title,
+.sgrid__offers-title,
+.sgrid__flow-title,
+.sgrid__stage-label,
+.cgrid__aside-title,
+.cgrid__done-title,
+.tgrid__ledger-title,
+.tgrid__client-name,
+.trk__cta-title,
+.a11y__title {
+  font-family: var(--font-head);
+}
+
+.home__title,
+.boot__title,
+.pgrid__title,
+.view__title,
+.legal-page__title {
+  font-weight: 750;
+  letter-spacing: -0.035em;
+}
+.rail__name,
+.hprofile__name { font-weight: 700; letter-spacing: -0.02em; }
+
+/* Second line of a two-part heading reads as quieter, not as a new colour. */
+.agrid__lead span,
+.sgrid__method-title span,
+.cgrid__aside-title span {
+  font-weight: 600;
+}
+
+/* ---------- Home headline beside the CTA (desktop) ----------
+   The line is one row from 1100px up, so its size has to come from the room
+   the panel leaves beside the "Get in touch" button, not from the viewport
+   alone. --headline-em-desk is the line's width in em at this face and
+   tracking (measured in the preview run). The intro's copy must match. */
+@media (min-width: 1100px) {
+  :root { --headline-em-desk: 18.6; }
+  .home__headline { align-items: center; }
+  .home__title,
+  .boot__title {
+    font-size: min(
+      clamp(30px, 3.6vw, 66px),
+      calc((100vw - var(--rail-w) - 2 * var(--panel-x) - 230px) / var(--headline-em-desk))
+    );
+  }
+}
+@media (max-width: 1099px) {
+  :root { --headline-em: 13.4; }
+}
+
+/* ---------- Services: "01 / 05" stays on one line ---------- */
+.sgrid__service-index { white-space: nowrap; }
+.sgrid__chip { letter-spacing: 0; }
+
+/* ---------- About: the portrait fills its column ----------
+   It was a square photo pinned to the bottom corner with an empty gradient
+   above it. Now it is a framed photo that takes the column's full height. */
+@media (min-width: 1100px) {
+  .agrid__portrait {
+    align-self: stretch;
+    display: flex;
+    margin: 0;
+    padding: clamp(14px, 1.4vw, 22px);
+    padding-left: 0;
+  }
+  .agrid__portrait img {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    object-fit: cover;
+    object-position: 50% 30%;
+    border-radius: calc(var(--radius-card) - 6px);
+    box-shadow: 0 30px 60px -30px rgba(6, 12, 26, 0.45);
+  }
+}
+
+/* ---------- Contact: book a call ----------
+   Sits on the dark FAQ plate, under the questions, above the email row. The
+   one orange-filled object on the plate, so it reads as the main action. */
+.cgrid__call {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  flex: 0 0 auto;
+  padding: 12px 14px;
+  border-radius: 16px;
+  color: #0B1120;
+  text-decoration: none;
+  background: var(--orange);
+  box-shadow: 0 14px 30px -18px rgba(255, 122, 26, 0.9);
+  transition: transform 220ms var(--ease-spring), background 200ms var(--ease-out);
+}
+.cgrid__call:hover { background: var(--orange-hover); transform: translateY(-1px); }
+.cgrid__call:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+.cgrid__call-mark {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: rgba(11, 17, 32, 0.12);
+}
+.cgrid__call-copy { display: flex; flex-direction: column; min-width: 0; line-height: 1.25; }
+.cgrid__call-copy b { font-size: 14.5px; font-weight: 700; }
+.cgrid__call-copy span { font-size: 12.5px; font-weight: 500; opacity: 0.78; }
+
+/* ---------- Track record ---------- */
+@media (min-width: 1100px) {
+  .trk .tgrid__glass { grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr); }
+}
+.trk__stage {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  min-height: 0;
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--radius-card);
+  background: var(--paper);
+  border: 1px solid var(--line-strong);
+  box-shadow: 0 30px 60px -40px rgba(6, 12, 26, 0.5);
+}
+.trk__frame {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex: 1 1 0;
+  min-height: 0;
+  padding: clamp(10px, 1.2vw, 16px);
+  background: #EEF1F6;
+  cursor: zoom-in;
+}
+.trk__frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+  filter: drop-shadow(0 16px 26px rgba(11, 30, 63, 0.16));
+  animation: trk-in 420ms var(--ease-out) both;
+}
+@keyframes trk-in { from { opacity: 0; transform: translateY(6px); } }
+.trk__zoom {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: var(--plate-ink);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 4px 12px -4px rgba(11, 30, 63, 0.3);
+  opacity: 0;
+  transition: opacity 200ms var(--ease-out);
+}
+.trk__frame:hover .trk__zoom,
+.trk__frame:focus-visible .trk__zoom { opacity: 1; }
+.trk__frame:focus-visible { outline: 2px solid var(--orange); outline-offset: -3px; }
+.trk__caption {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px clamp(14px, 1.2vw, 18px) 14px;
+  border-top: 1px solid var(--line);
+}
+.trk__caption b { font-size: 14px; font-weight: 650; color: var(--navy); }
+.trk__caption span { font-size: 12.5px; color: var(--muted); }
+
+.trk__picker { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.trk__picker .tgrid__pick { flex-direction: column; justify-content: center; gap: 6px; padding: 8px 6px 10px; }
+.trk__picker .tgrid__pick-thumb { width: 100%; height: 34px; border-radius: 6px; }
+.trk__picker .tgrid__pick-thumb img { object-position: left top; }
+.trk__picker .tgrid__pick-kicker { text-align: center; }
+
+.trk .tgrid__client-body { padding-right: 0; }
+.trk__quote {
+  display: block;
+  font-size: 14px;
+  font-style: italic;
+  color: var(--navy);
+}
+.trk__quote cite { display: block; margin-top: 2px; font-size: 12.5px; font-style: normal; color: var(--muted); }
+.trk__quote cite::before { content: '- '; }
+
+.trk__cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px 18px;
+  flex-wrap: wrap;
+  flex: 0 0 auto;
+  padding: clamp(14px, 1.8vh, 20px) clamp(16px, 1.4vw, 22px);
+  border-radius: 18px;
+  color: #EDF0F6;
+  background:
+    radial-gradient(80% 120% at 0% 0%, rgba(255, 122, 26, 0.24), transparent 60%),
+    var(--panel-dark);
+}
+.trk__cta-copy { flex: 1 1 260px; min-width: 0; }
+.trk__cta-title { font-size: clamp(18px, 1.35vw, 22px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; }
+.trk__cta-copy p { margin-top: 4px; font-size: 13px; line-height: 1.45; color: rgba(237, 240, 246, 0.72); }
+.trk__cta-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.trk__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: var(--radius-pill);
+  font-size: 13.5px;
+  font-weight: 650;
+  text-decoration: none;
+  color: #EDF0F6;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+  transition: transform 220ms var(--ease-spring), background 200ms var(--ease-out);
+}
+.trk__btn:hover { transform: translateY(-1px); background: rgba(255, 255, 255, 0.06); }
+.trk__btn--primary { color: #0B1120; background: var(--orange); box-shadow: none; }
+.trk__btn--primary:hover { background: var(--orange-hover); }
+.trk__btn:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
+
+@media (max-width: 1099px) {
+  .trk__stage { flex: 0 0 auto; }
+  .trk__frame { height: min(46vh, 320px); flex: 0 0 auto; }
+}
+@media (max-width: 639px) {
+  .trk__picker { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .trk__picker .tgrid__pick + .tgrid__pick { box-shadow: inset 1px 0 0 var(--line); }
+  .trk__cta-actions { width: 100%; }
+  .trk__btn { flex: 1 1 auto; justify-content: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .trk__frame img { animation: none; }
+}
+
+/* ---------- The still map ----------
+   Phones, reduced motion and slow machines never load the live shader, and
+   they used to get a flat colour. They now get the same topographic map as a
+   still (public/contours.svg, drawn by scripts/make-contours.py), tinted per
+   theme. When the shader does load, its canvas paints over this. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(60% 40% at 85% 10%, rgba(255, 122, 26, 0.55), transparent 70%),
+    radial-gradient(50% 35% at 10% 90%, rgba(255, 122, 26, 0.35), transparent 70%),
+    rgba(11, 30, 63, 0.30);
+  -webkit-mask: url('/contours.svg') center / cover no-repeat;
+  mask: url('/contours.svg') center / cover no-repeat;
+}
+[data-theme='dark'] body::before {
+  background:
+    radial-gradient(60% 40% at 85% 10%, rgba(255, 122, 26, 0.6), transparent 70%),
+    radial-gradient(50% 35% at 10% 90%, rgba(255, 122, 26, 0.4), transparent 70%),
+    rgba(255, 255, 255, 0.22);
+}

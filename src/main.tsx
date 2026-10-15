@@ -47,6 +47,7 @@ import './styles/apple.css'
 import './styles/mobile-pass.css'
 // Last: the perf tiers only ever turn things OFF, so they must win.
 import './styles/perf.css'
+import './styles/polish.css'
 
 // Re-apply this tab's performance verdict before the first paint, so a
 // downgraded visitor never sees the expensive layers flash back on reload.
@@ -67,6 +68,8 @@ createRoot(container).render(
           <Route path="/projects" element={<ProjectsView />} />
           <Route path="/services" element={<ServicesView />} />
           <Route path="/showcase" element={<ShowcaseView />} />
+          <Route path="/track-record" element={<TestimonialsGrid />} />
+          {/* Old address, kept so links shared before the rename still work. */}
           <Route path="/testimonials" element={<TestimonialsGrid />} />
           <Route path="/about" element={<AboutGrid />} />
           <Route path="/contact" element={<ContactGrid />} />

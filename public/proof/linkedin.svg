@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" font-family="Figtree, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif">
+<title>LinkedIn Lead Tracker (redrawn, private details hidden)</title>
+<rect x="0" y="0" width="1200" height="760" rx="18" fill="#FFFFFF"/>
+<rect x="0.5" y="0.5" width="1199" height="759" rx="18" fill="none" stroke="#E3E7EE" stroke-width="1"/>
+<rect x="0" y="0" width="1200" height="52" rx="18" fill="#F6F7FA"/>
+<rect x="0" y="34" width="1200" height="18" rx="0" fill="#F6F7FA"/>
+<circle cx="26" cy="26" r="6" fill="#FF5F57"/><circle cx="46" cy="26" r="6" fill="#FEBC2E"/><circle cx="66" cy="26" r="6" fill="#28C840"/>
+<text x="96" y="31" font-size="15" font-weight="650" fill="#1F2A3D" text-anchor="start" >LinkedIn Lead Tracker</text>
+<rect x="990" y="22" width="120" height="10" rx="5.0" fill="#E4E8EF"/>
+<rect x="1124" y="14" width="52" height="24" rx="12" fill="#188038"/>
+<text x="1150" y="31" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle" >Share</text>
+<line x1="0" y1="52" x2="1200" y2="52" stroke="#E3E7EE"/>
+<rect x="24" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="58" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="92" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="126" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="160" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="194" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="228" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="262" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="296" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="330" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="364" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="398" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="432" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<rect x="466" y="64" width="22" height="14" rx="4" fill="#EEF1F5"/>
+<line x1="0" y1="90" x2="1200" y2="90" stroke="#E3E7EE"/>
+<rect x="24" y="104" width="1152" height="40" rx="8" fill="#0B1E3F"/>
+<text x="44" y="130" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="start" >LinkedIn lead tracker</text>
+<text x="996" y="130" font-size="16" font-weight="750" fill="#FF7A1A" text-anchor="start" >50</text>
+<text x="1022" y="130" font-size="13" font-weight="600" fill="#AFC0DA" text-anchor="start" >requests sent</text>
+<text x="826" y="130" font-size="16" font-weight="750" fill="#FF7A1A" text-anchor="start" >57</text>
+<text x="852" y="130" font-size="13" font-weight="600" fill="#AFC0DA" text-anchor="start" >high priority</text>
+<rect x="24" y="156" width="466" height="30" rx="6" fill="#0A66C2"/>
+<text x="38" y="176" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="start" >Prospect</text>
+<rect x="494" y="156" width="226" height="30" rx="6" fill="#188038"/>
+<text x="508" y="176" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="start" >Status</text>
+<rect x="724" y="156" width="156" height="30" rx="6" fill="#F2A100"/>
+<text x="738" y="176" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="start" >Priority</text>
+<rect x="884" y="156" width="288" height="30" rx="6" fill="#0A66C2"/>
+<text x="898" y="176" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="start" >Next action</text>
+<text x="38" y="210" font-size="12" font-weight="700" fill="#6B7488" text-anchor="start" >Name</text>
+<text x="220" y="210" font-size="12" font-weight="700" fill="#6B7488" text-anchor="start" >Title</text>
+<text x="360" y="210" font-size="12" font-weight="700" fill="#6B7488" text-anchor="start" >Practice</text>
+<text x="508" y="210" font-size="12" font-weight="700" fill="#6B7488" text-anchor="start" >Stage</text>
+<text x="738" y="210" font-size="12" font-weight="700" fill="#6B7488" text-anchor="start" >Level</text>
+<text x="898" y="210" font-size="12" font-weight="700" fill="#6B7488" text-anchor="start" >Step and date</text>
+<rect x="24" y="222" width="1152" height="37" rx="0" fill="#F8FAFC"/>
+<rect x="38" y="233" width="120" height="10" rx="5.0" fill="#D5DAE3"/>
+<rect x="220" y="233" width="100" height="10" rx="5.0" fill="#E4E8EF"/>
+<rect x="360" y="233" width="110" height="10" rx="5.0" fill="#E4E8EF"/>
+<rect x="508" y="231.5" width="95.28" height="21.5" rx="10.75" fill="#0A66C21F"/><text x="555.64" y="247" font-size="11.5" font-weight="650" fill="#0A66C2" text-anchor="middle" >Request sent</text>
+<rect x="738" y="231.5" width="43.760000000000005" height="21.5" rx="10.75" fill="#FF7A1A1F"/><text x="759.88" y="247" font-size="11.5" font-weight="650" fill="#FF7A1A" text-anchor="middle" >High</text>
+<text x="898" y="246" font-size="13" font-weight="550" fill="#1F2A3D" text-anchor="start" >Follow up in 3 days</text>
+<rect x="38" y="270" width="149" height="10" rx="5.0" fill="#D5DAE3"/>
+<rect x="220" y="270" width="87" height="10" rx="5.0" fill="#E4E8EF"/>
+<rect x="360" y="270" width="99" height="10" rx="5.0" fill="#E4E8EF"/>
+<rect x="508" y="268.5" width="75.96000000000001" height="21.5" rx="10.75" fill="#1880381F"/><text x="545.98" y="284" font-size="11.5" font-weight="650" fill="#188038" text-anchor="middle" >Connected</text>
+<rect x="738" y="268.5" width="43.760000000000005" height="21.5" rx="10.75" fill="#FF7A1A1F"/><text x="759.88" y="284" font-size="11.5" font-weight="650" fill="#FF7A1A" text-anchor="middle" >High</text>
+<text x="898" y="283" font-size="13" font-weight="550" fill="#1F2A3D" text-anchor="start" >Send intro message</text>
+<rect x="24" y="296" width="1152" height="37" rx="0" fill="#F8FAFC"/>
+<rect x="38" y="307" width="128" height="10" rx="5.0" fill="#D5DAE3"/>
+<rect x="220" y="307" width="74" height="10" rx="5.0" fill="#E4E8EF"/>
+<rect x="360" y="307" width="88" height="10" rx="5.0" fill="#E4E8EF"/>
+<rect x="508" y="305.5" width="69.52000000000001" height="21.5" rx="10.75" fill="#7C3AED1F"/><text x="542.76" y="321" font-size="11.5" font-weight="650" fill="#7C3AED" text-anchor="middle" >Messaged</text>
+<rect x="738" y="305.5" width="43.760000000000005" height="21.5" rx="10.75" fill="#FF7A1A1F"/><text x="759.88" y="321" font-size="11.5" font-weight="650" fill="#FF7A1A" text-anchor="middle" >High</text>
+<text x="898" y="320" font-size="13" font-weight="550" fill="#1F2A3D" text-anchor="start" >Await reply</text>
+<rect x="38" y="344" width="157" height="10" rx="5.0" fill="#D5DAE3"/>
+<rect x="220" y="344" width="91" height="10" rx="5.0" fill="#E4E8EF"/>
+<rect x="360" y="344" width="77" height="10" rx="5.0" fill="#E4E8EF"/>
+<rect x="508" y="342.5" width="95.28" height="21.5" rx="10.75" fill="#0A66C21F"/><text x="555.64" y="358" font-size="11.5" font-weight="650" fill="#0A66C2" text-anchor="middle" >Request sent</text>
+<rect x="738" y="342.5" width="56.64" height="21.5" rx="10.75" fill="#F2A1001F"/><text x="766.32" y="358" font-size="11.5" font-weight="650" fill="#F2A100" text-anchor="middle" >Medium</text>
+<text x="898" y="357" font-size="13" font-weight="550" fill="#1F2A3D" text-anchor="start" >Follow up in 3 days</text>
+<rect x="24" y="370" width="1152" height="37" rx="0" fill="#F8FAFC"/>
+<rect x="38" y="381" width="136" height="10" rx="5.0" fill="#D5DAE3"/>
+<rect x="220" y="381" width="78" height="10" rx="5.0" fill="#E4E8EF"/>
+<rect x="360" y="381" width="106" height="10" rx="5.0" fill="#E4E8EF"/>
+<rect x="508" y="379.5" width="75.96000000000001" height="21.5" rx="10.75" fill="#1880381F"/><text x="545.98" y="395" font-size="11.5" font-weight="650" fill="#188038" text-anchor="middle" >Connected</text>
+<rect x="738" y="379.5" width="56.64" height="21.5" rx="10.75" fill="#F2A1001F"/><text x="766.32" y="395" font-size="11.5" font-weight="650" fill="#F2A100" text-anchor="middle" >Medium</text>
+<text x="898" y="394" font-size="13" font-weight="550" fill="#1F2A3D" text-anchor="start" >Share booking link</text>
+<rect x="38" y="418" width="165" height="10" rx="5.0" fill="#D5DAE3"/>
+<rect x="220" y="418" width="95" height="10" rx="5.0" fill="#E4E8EF"/>
+<rect x="360" y="418" width="95" height="10" rx="5.0" fill="#E4E8EF"/>
+<rect x="508" y="416.5" width="95.28" height="21.5" rx="10.75" fill="#0A66C21F"/><text x="555.64" y="432" font-size="11.5" font-weight="650" fill="#0A66C2" text-anchor="middle" >Request sent</text>
+<rect x="738" y="416.5" width="43.760000000000005" height="21.5" rx="10.75" fill="#FF7A1A1F"/><text x="759.88" y="432" font-size="11.5" font-weight="650" fill="#FF7A1A" text-anchor="middle" >High</text>
+<text x="898" y="431" font-size="13" font-weight="550" fill="#1F2A3D" text-anchor="start" >Follow up in 5 days</text>
+<rect x="24" y="444" width="1152" height="37" rx="0" fill="#F8FAFC"/>
+<rect x="38" y="455" width="144" height="10" rx="5.0" fill="#D5DAE3"/>
+<rect x="220" y="455" width="82" height="10" rx="5.0" fill="#E4E8EF"/>
+<rect x="360" y="455" width="84" height="10" rx="5.0" fill="#E4E8EF"/>
+<rect x="508" y="453.5" width="69.52000000000001" height="21.5" rx="10.75" fill="#7C3AED1F"/><text x="542.76" y="469" font-size="11.5" font-weight="650" fill="#7C3AED" text-anchor="middle" >Messaged</text>
+<rect x="738" y="453.5" width="56.64" height="21.5" rx="10.75" fill="#F2A1001F"/><text x="766.32" y="469" font-size="11.5" font-weight="650" fill="#F2A100" text-anchor="middle" >Medium</text>
+<text x="898" y="468" font-size="13" font-weight="550" fill="#1F2A3D" text-anchor="start" >Await reply</text>
+<rect x="38" y="492" width="123" height="10" rx="5.0" fill="#D5DAE3"/>
+<rect x="220" y="492" width="99" height="10" rx="5.0" fill="#E4E8EF"/>
+<rect x="360" y="492" width="73" height="10" rx="5.0" fill="#E4E8EF"/>
+<rect x="508" y="490.5" width="95.28" height="21.5" rx="10.75" fill="#0A66C21F"/><text x="555.64" y="506" font-size="11.5" font-weight="650" fill="#0A66C2" text-anchor="middle" >Request sent</text>
+<rect x="738" y="490.5" width="56.64" height="21.5" rx="10.75" fill="#F2A1001F"/><text x="766.32" y="506" font-size="11.5" font-weight="650" fill="#F2A100" text-anchor="middle" >Medium</text>
+<text x="898" y="505" font-size="13" font-weight="550" fill="#1F2A3D" text-anchor="start" >Follow up in 3 days</text>
+<rect x="24" y="518" width="1152" height="37" rx="0" fill="#F8FAFC"/>
+<rect x="38" y="529" width="152" height="10" rx="5.0" fill="#D5DAE3"/>
+<rect x="220" y="529" width="86" height="10" rx="5.0" fill="#E4E8EF"/>
+<rect x="360" y="529" width="102" height="10" rx="5.0" fill="#E4E8EF"/>
+<rect x="508" y="527.5" width="75.96000000000001" height="21.5" rx="10.75" fill="#1880381F"/><text x="545.98" y="543" font-size="11.5" font-weight="650" fill="#188038" text-anchor="middle" >Connected</text>
+<rect x="738" y="527.5" width="43.760000000000005" height="21.5" rx="10.75" fill="#FF7A1A1F"/><text x="759.88" y="543" font-size="11.5" font-weight="650" fill="#FF7A1A" text-anchor="middle" >High</text>
+<text x="898" y="542" font-size="13" font-weight="550" fill="#1F2A3D" text-anchor="start" >Send intro message</text>
+<rect x="38" y="566" width="131" height="10" rx="5.0" fill="#D5DAE3"/>
+<rect x="220" y="566" width="73" height="10" rx="5.0" fill="#E4E8EF"/>
+<rect x="360" y="566" width="91" height="10" rx="5.0" fill="#E4E8EF"/>
+<rect x="508" y="564.5" width="95.28" height="21.5" rx="10.75" fill="#0A66C21F"/><text x="555.64" y="580" font-size="11.5" font-weight="650" fill="#0A66C2" text-anchor="middle" >Request sent</text>
+<rect x="738" y="564.5" width="56.64" height="21.5" rx="10.75" fill="#F2A1001F"/><text x="766.32" y="580" font-size="11.5" font-weight="650" fill="#F2A100" text-anchor="middle" >Medium</text>
+<text x="898" y="579" font-size="13" font-weight="550" fill="#1F2A3D" text-anchor="start" >Follow up in 5 days</text>
+<rect x="24" y="592" width="1152" height="37" rx="0" fill="#F8FAFC"/>
+<rect x="38" y="603" width="160" height="10" rx="5.0" fill="#D5DAE3"/>
+<rect x="220" y="603" width="90" height="10" rx="5.0" fill="#E4E8EF"/>
+<rect x="360" y="603" width="80" height="10" rx="5.0" fill="#E4E8EF"/>
+<rect x="508" y="601.5" width="75.96000000000001" height="21.5" rx="10.75" fill="#6B74881F"/><text x="545.98" y="617" font-size="11.5" font-weight="650" fill="#6B7488" text-anchor="middle" >Not a fit</text>
+<rect x="738" y="601.5" width="37.32" height="21.5" rx="10.75" fill="#6B74881F"/><text x="756.66" y="617" font-size="11.5" font-weight="650" fill="#6B7488" text-anchor="middle" >Low</text>
+<text x="898" y="616" font-size="13" font-weight="550" fill="#1F2A3D" text-anchor="start" >Archive</text>
+<rect x="38" y="640" width="139" height="10" rx="5.0" fill="#D5DAE3"/>
+<rect x="220" y="640" width="77" height="10" rx="5.0" fill="#E4E8EF"/>
+<rect x="360" y="640" width="109" height="10" rx="5.0" fill="#E4E8EF"/>
+<rect x="508" y="638.5" width="95.28" height="21.5" rx="10.75" fill="#0A66C21F"/><text x="555.64" y="654" font-size="11.5" font-weight="650" fill="#0A66C2" text-anchor="middle" >Request sent</text>
+<rect x="738" y="638.5" width="43.760000000000005" height="21.5" rx="10.75" fill="#FF7A1A1F"/><text x="759.88" y="654" font-size="11.5" font-weight="650" fill="#FF7A1A" text-anchor="middle" >High</text>
+<text x="898" y="653" font-size="13" font-weight="550" fill="#1F2A3D" text-anchor="start" >Follow up in 3 days</text>
+<line x1="0" y1="720" x2="1200" y2="720" stroke="#E3E7EE"/>
+<rect x="24" y="726" width="79.80000000000001" height="26" rx="6" fill="#E8F0FE"/>
+<text x="63.900000000000006" y="744" font-size="12.5" font-weight="700" fill="#0A66C2" text-anchor="middle" >Tracker</text>
+<text x="155.4" y="744" font-size="12.5" font-weight="550" fill="#6B7488" text-anchor="middle" >Accepted</text>
+<text x="250.6" y="744" font-size="12.5" font-weight="550" fill="#6B7488" text-anchor="middle" >Messages</text>
+<text x="342.1" y="744" font-size="12.5" font-weight="550" fill="#6B7488" text-anchor="middle" >Archive</text>
+</svg>

@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from 'react'
-import { PaperPlaneTilt, CheckCircle, WarningCircle, EnvelopeSimple, ArrowUpRight, CaretDown } from '@/components/slab'
+import { PaperPlaneTilt, CheckCircle, WarningCircle, EnvelopeSimple, ArrowUpRight, CaretDown, CalendarCheck } from '@/components/slab'
+import { callHref, callIsExternal } from '@/lib/booking'
 import { FAQS } from '@/data/faqs'
 import { profile } from '@/data/profile'
 import { readLead, submitLead, SubmitError, MAX_NAME, MAX_EMAIL, MAX_MESSAGE, type SubmitResult } from '@/lib/contact'
@@ -63,7 +64,7 @@ export default function ContactGrid() {
           Let's keep the work moving.
         </h1>
         <p className="pgrid__lede">
-          Tell me what your team is trying to move forward: leads, outreach, or day-to-day operations. I will reply with next steps.
+          Tell me what your team needs help with: leads, outreach, healthcare admin, or day-to-day support. I reply within one business day.
         </p>
       </header>
 
@@ -102,6 +103,21 @@ export default function ContactGrid() {
               )
             })}
           </ul>
+
+          <a
+            className="cgrid__call"
+            href={callHref()}
+            {...(callIsExternal() ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+          >
+            <span className="cgrid__call-mark" aria-hidden="true">
+              <CalendarCheck size={20} weight="duotone" />
+            </span>
+            <span className="cgrid__call-copy">
+              <b>Book a 15-minute call</b>
+              <span>{callIsExternal() ? 'Pick a time that suits you' : 'Send your preferred times and I will confirm'}</span>
+            </span>
+            <ArrowUpRight size={15} weight="bold" aria-hidden="true" className="cgrid__call-go" />
+          </a>
 
           <div className="cgrid__direct">
             <a className="cgrid__mail" href={`mailto:${profile.email}`}>

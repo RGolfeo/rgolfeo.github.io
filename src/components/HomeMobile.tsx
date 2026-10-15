@@ -47,11 +47,11 @@ export function HomeStats() {
 }
 
 const TILES = [
-  { n: '01', label: 'Projects', to: '/projects', title: 'Work you can inspect.', desc: 'Sanitized dashboards, pipelines, and sample documents.', img: '/placeholders/project-1.jpg' },
-  { n: '02', label: 'Services', to: '/services', title: 'Five ways I can help.', desc: 'Lead sourcing, outreach, CRM, inbox, and operations.', Icon: Stack },
-  { n: '03', label: 'Showcase', to: '/showcase', title: 'Spin through the work.', desc: 'A 3D reel of sanitized client screens.', Icon: Coffee, accent: true },
-  { n: '04', label: 'Testimonials', to: '/testimonials', title: 'Proof, not promises.', desc: 'Who I have worked with and what I did.', img: '/placeholders/testimonial-1.jpg' },
-  { n: '05', label: 'About', to: '/about', title: `Hi, I'm ${profile.firstName}.`, desc: 'BPO-trained, US-hours friendly, built on follow-through.', img: profile.avatarSrc },
+  { n: '01', label: 'Projects', to: '/projects', title: 'Work you can inspect.', desc: 'Sanitized dashboards, pipelines, and sample documents.', img: '/proof/dashboard.svg' },
+  { n: '02', label: 'Services', to: '/services', title: 'Five ways I can help.', desc: 'Leads, outreach, CRM, healthcare admin, and support.', Icon: Stack },
+  { n: '03', label: 'Showcase', to: '/showcase', title: 'Spin through the work.', desc: 'A 3D reel of real client screens, details hidden.', Icon: Coffee, accent: true },
+  { n: '04', label: 'Track record', to: '/track-record', title: 'New to freelance, not to clients.', desc: 'Where I have worked and what I did.', img: '/proof/dashboard.svg' },
+  { n: '05', label: 'About', to: '/about', title: `Hi, I'm ${profile.firstName}.`, desc: 'Seven years of US client work, now freelance.', img: profile.avatarSrc },
 ] as const
 
 export function HomeExplore() {
@@ -82,15 +82,15 @@ export function HomeExplore() {
       {/* A header that links carries its chevron on the title itself. */}
       <div className="hsec">
         <h2 className="hsec__title">
-          <Link to="/testimonials" className="hsec__link">
+          <Link to="/track-record" className="hsec__link">
             Proof of work
             <CaretRight size={16} weight="bold" aria-hidden="true" />
           </Link>
         </h2>
       </div>
-      <Link to="/testimonials" className="hproof" aria-label="Proof of work: healthcare outreach system">
+      <Link to="/track-record" className="hproof" aria-label="Proof of work: healthcare outreach system">
         <span className="hproof__stage">
-          <img src="/placeholders/testimonial-1.jpg" alt="" loading="lazy" />
+          <img src="/proof/dashboard.svg" alt="" loading="lazy" />
           <span className="hproof__play" aria-hidden="true"><CaretRight size={20} weight="bold" /></span>
           <span className="hproof__dur" aria-hidden="true">View</span>
         </span>

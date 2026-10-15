@@ -19,14 +19,14 @@ export type MobileApp = AppProject
 
 /**
  * Ryan's roles and engagements, shown as cards in the Projects "Experience"
- * window. Images live in public/placeholders/ (sanitized client screens).
+ * window. Images are the redrawn proof screens in public/proof/.
  */
 export const mobileApps: MobileApp[] = [
   {
     name: 'Lead Generation VA',
     tagline: 'Healthcare credentialing firm · 2026 to present',
-    description: 'Research and verify qualified healthcare providers, keep outreach-ready records, run LinkedIn and email outreach, and send clear daily reports.',
-    imageSrc: '/placeholders/app-1.jpg',
+    description: 'Research and verify qualified healthcare providers, run LinkedIn and email outreach, keep outreach-ready records, send daily reports, and support credentialing work.',
+    imageSrc: '/proof/dashboard.svg',
     accentColor: '#0A66C2',
     stats: [
       { value: '287', label: 'Leads tracked' },
@@ -37,9 +37,9 @@ export const mobileApps: MobileApp[] = [
   },
   {
     name: 'Growth & Outreach Specialist',
-    tagline: 'Project-based · 2026 to present',
+    tagline: 'Project-based · 2026',
     description: 'Multichannel lead generation, appointment setting, market research, and CRM pipeline organization for small teams.',
-    imageSrc: '/placeholders/app-2.jpg',
+    imageSrc: '/proof/pipeline.svg',
     accentColor: '#7C3AED',
     stats: [
       { value: '149', label: 'Tier A prospects' },
@@ -52,7 +52,7 @@ export const mobileApps: MobileApp[] = [
     name: 'Client & Financial Operations',
     tagline: 'Cognizant, TaskUs, Verizon, Sutherland · 2018 to 2025',
     description: 'Seven years of high-volume, compliance-driven client work across billing, trades, refunds, fraud prevention, and documentation.',
-    imageSrc: '/placeholders/app-3.jpg',
+    imageSrc: '/proof/linkedin.svg',
     accentColor: '#16A34A',
     stats: [
       { value: '7+', label: 'Years' },
@@ -92,7 +92,7 @@ export const webApps: AppProject[] = [
     name: 'GC Services / Verizon',
     tagline: 'Customer Service Ambassador · 2019 to 2023',
     description: 'Billing, payments, account security, fraud prevention, technical support, and needs-based product recommendations.',
-    imageSrc: '/placeholders/project-3.jpg',
+    imageSrc: '/proof/linkedin.svg',
     accentColor: '#0891B2',
     stats: [
       { value: '4 yrs', label: 'Tenure' },
@@ -105,7 +105,7 @@ export const webApps: AppProject[] = [
     name: 'Sutherland',
     tagline: 'Customer Service Representative · 2018 to 2019',
     description: 'Billing, account-management, and technical-support inquiries in a fast-paced contact-center environment.',
-    imageSrc: '/placeholders/project-4.jpg',
+    imageSrc: '/proof/sales-navigator.svg',
     accentColor: '#F59E0B',
     stats: [
       { value: '1 yr', label: 'Tenure' },

@@ -209,8 +209,8 @@
 .agrid__cell-meta {
   font-size: clamp(10px, 0.62vw, 11.5px);
   font-weight: 600;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  text-transform: none;
   color: var(--muted);
 }
 

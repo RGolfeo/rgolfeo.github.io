@@ -31,6 +31,9 @@ export type Profile = {
   /** Tooltip / screen-reader label on the verified tick next to your name. */
   verifiedLabel: string
   email: string
+  /** A booking page (Google Calendar appointment schedule, Calendly...).
+   *  Leave empty and "Book a call" opens a pre-filled email request instead. */
+  bookingUrl: string
   location: string
   /** Three short proof facts shown on phones under the Home lede. */
   stats: Stat[]
@@ -47,21 +50,22 @@ export const profile: Profile = {
   name: 'Ryan Golfeo',
   firstName: 'Ryan',
   handle: '@rgolfeo',
-  role: 'Lead Generation & Virtual Assistant',
+  role: 'Virtual Assistant & Lead Generation',
   avatarSrc: '/avatar.webp',
-  verifiedLabel: '7+ years of client-facing experience',
+  verifiedLabel: '7+ years of US client-facing experience',
   email: 'rgolfeo41@gmail.com',
+  bookingUrl: '',
   location: 'Pasig City, Philippines',
   stats: [
-    { value: '7+ yrs', label: 'Client-facing experience', Icon: Briefcase },
-    { value: '287', label: 'LinkedIn leads tracked', Icon: SealCheck },
-    { value: 'GMT+8', label: 'US-hours overlap', Icon: Clock },
+    { value: '7+ yrs', label: 'US client support', Icon: Briefcase },
+    { value: '287', label: 'Leads tracked', Icon: SealCheck },
+    { value: 'US hours', label: 'From the Philippines', Icon: Clock },
   ],
   // The intro types this line, then flies it into the Home headline.
   // Keep it short: two halves, 5-8 words total.
-  displayName: { line1: 'I find the leads.', line2: 'You close the deals.' },
+  displayName: { line1: 'You grow the business.', line2: 'I keep it moving.' },
   hero: {
-    body: 'Lead generation and virtual assistant support for founders and lean US teams: sourcing, outreach, CRM, and follow-through.',
+    body: 'Virtual assistant for founders and lean US teams: lead generation, outreach, CRM upkeep, healthcare admin, and everyday support, backed by seven years of US client work.',
     portraitSrc: '/avatar.webp',
     portraitAlt: 'Ryan Golfeo in a professional workspace',
   },

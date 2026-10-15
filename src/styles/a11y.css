@@ -107,8 +107,8 @@
   margin-bottom: 6px;
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  text-transform: none;
   color: color-mix(in srgb, var(--cream) 55%, transparent);
 }
 .a11y__sizes {

@@ -76,8 +76,8 @@
 .sgrid__method-eyebrow {
   font-size: var(--fs-eyebrow);
   font-weight: 600;
-  letter-spacing: var(--ls-eyebrow);
-  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  text-transform: none;
   color: var(--ink-eyebrow);
 }
 .sgrid__method-title {
@@ -258,8 +258,8 @@
   border-radius: var(--radius-pill);
   font-size: 10.5px;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  text-transform: none;
   color: var(--orange-ink);
   background: rgba(255, 122, 26, 0.12);
   box-shadow: inset 0 0 0 1px rgba(255, 122, 26, 0.22);
@@ -306,8 +306,8 @@
 .sgrid__flow-eyebrow {
   font-size: var(--fs-eyebrow);
   font-weight: 600;
-  letter-spacing: var(--ls-eyebrow);
-  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  text-transform: none;
   color: var(--orange-ink);
 }
 .sgrid__flow-title {

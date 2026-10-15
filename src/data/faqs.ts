@@ -9,19 +9,19 @@ export type QA = { q: string; a: string }
 export const FAQS: QA[] = [
   {
     q: 'What do you do?',
-    a: 'Lead generation and virtual assistant support: prospect research, LinkedIn and email outreach, CRM and tracker upkeep, and admin follow-through. Most of my clients are founders and lean US teams.',
+    a: 'I am a virtual assistant for founders and lean US teams: lead generation and outreach, CRM and reporting, healthcare credentialing support, and everyday admin and customer support.',
   },
   {
     q: 'How fast can you start?',
-    a: 'Usually within a week. I work remotely and keep flexible hours that overlap with US time zones, so we can set a schedule that fits your team.',
+    a: 'Usually within a week. I am in Pasig City, Philippines (GMT+8) and regularly work US Eastern, Central, and Pacific hours, so we can set a schedule that fits your team.',
   },
   {
     q: 'How do you charge?',
     a: 'I work part-time, contract, or project-based. After a short call about your goals and volume, I send a simple quote with the scope and hours.',
   },
   {
-    q: 'Where are you based?',
-    a: 'Pasig City, Philippines (GMT+8). I regularly work US Eastern, Central, and Pacific hours.',
+    q: 'What if my task is not on your list?',
+    a: 'Ask me. Most research, admin, and support work is a quick learn for me, and I will tell you honestly if something is outside what I can do well.',
   },
   {
     q: 'What happens after I write?',

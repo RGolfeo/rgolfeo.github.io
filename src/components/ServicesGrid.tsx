@@ -75,8 +75,8 @@ type Service = {
 const SERVICES: Service[] = [
   {
     index: '01',
-    title: 'Qualified lead sourcing',
-    description: 'Targeted prospect lists built around relevance, decision-maker fit, and clear next actions.',
+    title: 'Lead generation & research',
+    description: 'Targeted prospect lists built around fit, verified contacts, and a clear next step for every record.',
     chip: 'Find the right people',
     logos: [LINKEDIN, SHEETS, OPENAI],
     bullets: ['Verified individual professional emails', 'No duplicates across batches', 'Fit and priority notes on every record'],
@@ -91,27 +91,27 @@ const SERVICES: Service[] = [
   },
   {
     index: '03',
-    title: 'CRM & tracker upkeep',
-    description: 'Clean records, accurate statuses, and visible next steps for reliable follow-through.',
+    title: 'CRM, trackers & reporting',
+    description: 'Clean records, accurate statuses, and updates your team can read at a glance.',
     chip: 'Know what happens next',
     logos: [GHL, SHEETS, GWS],
-    bullets: ['Pipeline stages kept current', 'Lead scoring and prioritization', 'Dashboards your team can read'],
+    bullets: ['Pipeline stages kept current', 'Lead scoring and prioritization', 'Daily start and end reports'],
   },
   {
     index: '04',
-    title: 'Calendar & inbox support',
-    description: 'Follow-ups surfaced and communication organized so admin does not take over the day.',
-    chip: 'Protect your time',
-    logos: [OUTLOOK, ZOOM, GWS],
-    bullets: ['Inbox triage and reply drafts', 'Scheduling across US time zones', 'Reminders that keep leads warm'],
+    title: 'Healthcare admin & credentialing',
+    description: 'Support for credentialing teams: provider records, verifications, and application follow-ups.',
+    chip: 'Keep providers moving',
+    logos: [SHEETS, OUTLOOK, ZOOM],
+    bullets: ['CAQH profile and NPI lookups', 'License checks and tracking logs', 'Payer application status follow-ups'],
   },
   {
     index: '05',
-    title: 'Operations follow-through',
-    description: 'Task execution, documented updates, and handoffs that keep small teams aligned.',
-    chip: 'Keep handoffs intact',
-    logos: [SLACK, LOOM, GWS],
-    bullets: ['Daily start and end reports', 'SOPs and reusable templates', 'Credentialing and admin support'],
+    title: 'Admin & customer support',
+    description: 'Inbox, calendar, and customer replies handled with seven years of US customer-support habits.',
+    chip: 'Protect your time',
+    logos: [GWS, SLACK, LOOM],
+    bullets: ['Inbox triage and reply drafts', 'Scheduling across US time zones', 'Email and chat customer support'],
   },
 ]
 
@@ -139,7 +139,7 @@ export default function ServicesGrid() {
           Support built around business outcomes.
         </h1>
         <p className="pgrid__lede">
-          Better prospecting, cleaner execution, and stronger follow-up for founders and lean US teams.
+          One assistant for growth work and day-to-day operations, for founders and lean US teams.
         </p>
       </header>
 
