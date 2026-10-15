@@ -47,7 +47,7 @@ export function HomeStats() {
 }
 
 const TILES = [
-  { n: '01', label: 'Projects', to: '/projects', title: 'Work you can inspect.', desc: 'Sanitized dashboards, pipelines, and sample documents.', img: '/proof/dashboard.svg' },
+  { n: '01', label: 'Projects', to: '/projects', title: 'Work you can inspect.', desc: 'Real dashboards, pipelines, and SOPs, details hidden.', img: '/proof/dashboard.svg' },
   { n: '02', label: 'Services', to: '/services', title: 'Five ways I can help.', desc: 'Leads, outreach, CRM, healthcare admin, and support.', Icon: Stack },
   { n: '03', label: 'Showcase', to: '/showcase', title: 'Spin through the work.', desc: 'A 3D reel of real client screens, details hidden.', Icon: Coffee, accent: true },
   { n: '04', label: 'Track record', to: '/track-record', title: 'New to freelance, not to clients.', desc: 'Where I have worked and what I did.', img: '/proof/dashboard.svg' },
@@ -91,8 +91,6 @@ export function HomeExplore() {
       <Link to="/track-record" className="hproof" aria-label="Proof of work: healthcare outreach system">
         <span className="hproof__stage">
           <img src="/proof/dashboard.svg" alt="" loading="lazy" />
-          <span className="hproof__play" aria-hidden="true"><CaretRight size={20} weight="bold" /></span>
-          <span className="hproof__dur" aria-hidden="true">View</span>
         </span>
         <span className="hproof__copy">
           <span className="hproof__title">287 leads tracked, 170 outreach-ready, 57 high-priority.</span>

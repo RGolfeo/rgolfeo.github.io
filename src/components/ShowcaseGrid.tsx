@@ -18,7 +18,7 @@ export default function ShowcaseGrid() {
             Spin through the work.
           </h1>
           <p className="pgrid__lede">
-            Sanitized client dashboards, pipelines, and sample documents. Drag the reel, then open any page.
+            Client dashboards, pipelines, and sample documents, details hidden. Drag the reel, then open any page.
           </p>
         </div>
 

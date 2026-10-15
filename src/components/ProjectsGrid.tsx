@@ -155,9 +155,9 @@ function AppsPreview() {
 }
 
 const PROJECTS: Project[] = [
-  { id: 'workflows', cat: 'work', index: '01', title: 'Proof of work', desc: 'Sanitized screens from real client systems: dashboard, pipeline, LinkedIn board, and Sales Navigator.', Icon: FlowIcon, logos: [LINKEDIN, SHEETS], eyebrow: 'Screenshots', Section: AutomationsPanel, span: 2, Preview: WorkflowsPreview },
+  { id: 'workflows', cat: 'work', index: '01', title: 'Proof of work', desc: 'Screens from real client systems, redrawn with names hidden: dashboard, pipeline, LinkedIn tracker, and Sales Navigator.', Icon: FlowIcon, logos: [LINKEDIN, SHEETS], eyebrow: 'Screenshots', Section: AutomationsPanel, span: 2, Preview: WorkflowsPreview },
   { id: 'plan', cat: 'work', index: '02', title: 'Prospect sourcing SOP', desc: 'The rules I follow to deliver clean, verified, duplicate-free prospect batches.', Icon: PlanIcon, logos: [GWS], eyebrow: 'Sample document', Section: PlanPanel, Preview: PlanPreview },
-  { id: 'funnels', cat: 'sites', index: '06', title: 'Work gallery', desc: 'Spin the reel through sanitized client screens and sample documents.', Icon: GlobeIcon, logos: [SHEETS], eyebrow: 'Work gallery', Section: BarrelPanel, Preview: FunnelsPreview },
+  { id: 'funnels', cat: 'sites', index: '06', title: 'Work gallery', desc: 'Spin the reel through client screens and sample documents.', Icon: GlobeIcon, logos: [SHEETS], eyebrow: 'Work gallery', Section: BarrelPanel, Preview: FunnelsPreview },
   { id: 'ai', cat: 'ai', index: '07', title: 'Workflows I run', desc: 'The repeatable systems behind my outreach and admin work.', Icon: SparkIcon, logos: [LINKEDIN, OUTLOOK, CLAUDE], eyebrow: 'Workflows', Section: AIWindow, Preview: AIPreview },
   { id: 'apps', cat: 'apps', index: '08', title: 'Experience', desc: 'Current engagements plus seven years across BPO, financial operations, and remote support.', Icon: DeviceIcon, logos: [LINKEDIN], eyebrow: 'Experience', Section: AppsWindow, span: 2, Preview: AppsPreview },
 ]
@@ -295,7 +295,7 @@ export default function ProjectsGrid() {
         <h1 className="pgrid__title" id="projects-title">
           Work you can inspect.
         </h1>
-        <p className="pgrid__lede">Real client systems, intentionally sanitized. Open a card to see it full size.</p>
+        <p className="pgrid__lede">Real client systems with private details hidden. Open any card to see it full size.</p>
       </header>
 
       {phone && (

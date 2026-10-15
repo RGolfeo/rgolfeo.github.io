@@ -95,8 +95,11 @@ h2,
     );
   }
 }
+/* Below the shell the line breaks after its first half, so each half gets
+   its own row and the size comes from the longer half (~10em). */
 @media (max-width: 1099px) {
-  :root { --headline-em: 13.4; }
+  :root { --headline-em: 10.4; }
+  .home__half { display: block; }
 }
 
 /* ---------- Services: "01 / 05" stays on one line ---------- */
@@ -298,15 +301,51 @@ body::before {
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(60% 40% at 85% 10%, rgba(255, 122, 26, 0.55), transparent 70%),
-    radial-gradient(50% 35% at 10% 90%, rgba(255, 122, 26, 0.35), transparent 70%),
-    rgba(11, 30, 63, 0.30);
+    radial-gradient(60% 40% at 85% 10%, rgba(255, 122, 26, 0.32), transparent 70%),
+    radial-gradient(50% 35% at 10% 90%, rgba(255, 122, 26, 0.22), transparent 70%),
+    rgba(11, 30, 63, 0.13);
   -webkit-mask: url('/contours.svg') center / cover no-repeat;
   mask: url('/contours.svg') center / cover no-repeat;
 }
 [data-theme='dark'] body::before {
   background:
-    radial-gradient(60% 40% at 85% 10%, rgba(255, 122, 26, 0.6), transparent 70%),
-    radial-gradient(50% 35% at 10% 90%, rgba(255, 122, 26, 0.4), transparent 70%),
-    rgba(255, 255, 255, 0.22);
+    radial-gradient(60% 40% at 85% 10%, rgba(255, 122, 26, 0.42), transparent 70%),
+    radial-gradient(50% 35% at 10% 90%, rgba(255, 122, 26, 0.28), transparent 70%),
+    rgba(255, 255, 255, 0.12);
+}
+
+/* ---------- Projects: build card titles wrap instead of cutting off ---------- */
+.bento__build-title {
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.bento__build-desc { -webkit-line-clamp: 1; }
+
+/* ---------- Phone: tool names under the icons get two short lines ---------- */
+@media (max-width: 1099px) {
+  .home .tools-marquee__label {
+    max-width: 76px;
+    font-size: 11px;
+    white-space: normal;
+    text-overflow: clip;
+    text-align: center;
+    line-height: 1.2;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}
+
+/* ---------- Track record: tighter ledger so three rows always fit ---------- */
+@media (min-width: 1100px) {
+  .trk .tgrid__glass { grid-template-columns: minmax(0, 1.18fr) minmax(0, 1fr); }
+  .trk .tgrid__client { padding-block: clamp(8px, 1.1vh, 14px); }
+  .trk .tgrid__client-daily { font-size: 13.5px; line-height: 1.45; }
+  .trk .tgrid__client-head { gap: 4px; }
+}
+.trk .tgrid__client-mark { display: none; }
+@media (max-width: 1099px) {
+  .trk__frame { height: auto; aspect-ratio: 1200 / 760; }
 }

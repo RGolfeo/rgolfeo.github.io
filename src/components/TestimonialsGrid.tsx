@@ -67,7 +67,7 @@ const CLIENTS: Client[] = [
     name: 'Healthcare credentialing firm',
     role: 'Lead generation VA, 2026 to now',
     daily:
-      'I research and verify healthcare providers, run LinkedIn and email outreach, keep the trackers current, send daily reports, and now support the credentialing team.',
+      'Provider research and verification, LinkedIn and email outreach, tracker upkeep, daily reports, and now credentialing support.',
     work: ['Prospect research', 'Outreach', 'Credentialing'],
     Icon: Gauge,
   },
@@ -84,7 +84,7 @@ const CLIENTS: Client[] = [
     name: 'Cognizant, TaskUs, Verizon, Sutherland',
     role: 'US customer and financial operations, 2018 to 2025',
     daily:
-      'Seven years of high-volume US client work: billing, account and trade requests, refunds, fraud prevention, and careful documentation.',
+      'High-volume US client work: billing, account and trade requests, refunds, fraud prevention, and careful documentation.',
     work: ['Client support', 'Financial ops', 'Documentation'],
     Icon: Code,
   },
@@ -188,7 +188,7 @@ export default function TestimonialsGrid() {
           <div className="trk__cta">
             <div className="trk__cta-copy">
               <h2 className="trk__cta-title">Try me on a real task.</h2>
-              <p>Freelance reviews take time to collect. Until then, start with a short trial task and judge the work yourself.</p>
+              <p>Reviews take time to collect. Until then, start with a short trial task and judge the work yourself.</p>
             </div>
             <div className="trk__cta-actions">
               <Link className="trk__btn trk__btn--primary" to="/contact">

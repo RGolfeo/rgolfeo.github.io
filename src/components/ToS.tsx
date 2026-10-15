@@ -25,7 +25,7 @@ export default function ToS() {
 
         <div className="legal-page__body">
           <h2>Using this site</h2>
-          <p>This site is a personal portfolio for Ryan Golfeo. You are welcome to browse it and contact me about work. Screenshots shown here are sanitized samples, and numbers describe past results, not guarantees of future ones.</p>
+          <p>This site is a personal portfolio for Ryan Golfeo. You are welcome to browse it and contact me about work. Client screens shown here are redrawn with private details hidden, and numbers describe past results, not guarantees of future ones.</p>
 
           <h2>Work and payment</h2>
           <p>Scope, hours, rates, schedule, and payment terms for any engagement are agreed in writing before work starts. Nothing on this site is a binding offer.</p>
