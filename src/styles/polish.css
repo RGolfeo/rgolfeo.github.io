@@ -108,26 +108,156 @@ h2,
 .sgrid__service-index { white-space: nowrap; }
 .sgrid__chip { letter-spacing: 0; }
 
-/* ---------- About: the portrait fills its column ----------
-   It was a square photo pinned to the bottom corner with an empty gradient
-   above it. Now it is a framed photo that takes the column's full height. */
+/* ---------- About: a small sharp portrait, then why it pays off ----------
+   The photo used to fill half the sheet, stretched past its 420px source
+   and soft. It is now a compact profile card at a size the file can hold
+   crisply, and the column goes to what a client gains. */
 @media (min-width: 1100px) {
-  .agrid__portrait {
-    align-self: stretch;
-    display: flex;
-    margin: 0;
-    padding: clamp(14px, 1.4vw, 22px);
-    padding-left: 0;
-  }
-  .agrid__portrait img {
-    width: 100%;
-    height: 100%;
-    max-height: none;
-    object-fit: cover;
-    object-position: 50% 30%;
-    border-radius: calc(var(--radius-card) - 6px);
-    box-shadow: 0 30px 60px -30px rgba(6, 12, 26, 0.45);
-  }
+  .agrid__glass { grid-template-columns: minmax(0, 1.25fr) minmax(320px, 1fr); }
+}
+.agrid__side {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, 1.6vh, 18px);
+  min-height: 0;
+  min-width: 0;
+  padding: clamp(4px, 1vh, 14px) clamp(2px, 0.4vw, 8px);
+}
+.agrid__card {
+  display: grid;
+  grid-template-columns: clamp(96px, 7.6vw, 124px) minmax(0, 1fr);
+  gap: clamp(12px, 1.2vw, 18px);
+  align-items: center;
+  padding: clamp(10px, 1.2vh, 14px);
+  border-radius: 20px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: 0 20px 40px -32px rgba(6, 12, 26, 0.5);
+}
+.agrid__photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  height: auto;
+  object-fit: cover;
+  object-position: 50% 22%;
+  border-radius: 14px;
+  background: #0B1120;
+}
+.agrid__card-copy { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.agrid__card-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-head);
+  font-size: clamp(17px, 1.3vw, 21px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+}
+.agrid__card-name svg { color: var(--verified); flex: none; }
+.agrid__card-role { font-size: 13.5px; color: var(--muted); }
+.agrid__card-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 2px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--navy);
+}
+.agrid__card-status i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--success);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--success) 22%, transparent);
+}
+.agrid__card-actions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.agrid__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 34px;
+  padding: 0 13px;
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 650;
+  text-decoration: none;
+  color: var(--navy);
+  box-shadow: inset 0 0 0 1px var(--line-strong);
+  transition: transform 200ms var(--ease-spring), background 200ms var(--ease-out);
+}
+.agrid__btn:hover { transform: translateY(-1px); background: var(--tint); }
+.agrid__btn--primary { color: #0B1120; background: var(--orange); box-shadow: none; }
+.agrid__btn--primary:hover { background: var(--orange-hover); }
+.agrid__btn:focus-visible,
+.agrid__more:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
+
+.agrid__values {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: clamp(12px, 1.6vh, 18px) clamp(14px, 1.2vw, 20px);
+  border-radius: 20px;
+  color: #EDF0F6;
+  background:
+    radial-gradient(70% 60% at 100% 0%, rgba(255, 122, 26, 0.20), transparent 65%),
+    var(--panel-dark);
+}
+.agrid__values-title {
+  font-size: clamp(15px, 1.1vw, 18px);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin-bottom: clamp(6px, 1vh, 10px);
+}
+.agrid__values ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex: 1 1 auto;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.agrid__value {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  padding: clamp(5px, 0.9vh, 9px) 0;
+}
+.agrid__value + .agrid__value { border-top: 1px solid rgba(255, 255, 255, 0.08); }
+.agrid__value-mark {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  color: var(--orange);
+  background: rgba(255, 122, 26, 0.12);
+}
+.agrid__value-copy { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+.agrid__value-copy b { font-size: clamp(13px, 0.92vw, 14.5px); font-weight: 700; }
+.agrid__value-copy span { font-size: clamp(12px, 0.82vw, 13px); line-height: 1.4; color: rgba(237, 240, 246, 0.68); }
+.agrid__more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  margin-top: clamp(6px, 1vh, 10px);
+  font-size: 13px;
+  font-weight: 650;
+  color: #FFB27A;
+  text-decoration: none;
+}
+.agrid__more:hover { text-decoration: underline; }
+
+@media (max-width: 1099px) {
+  .agrid__side { padding: 0; }
+  .agrid__card { grid-template-columns: 104px minmax(0, 1fr); }
 }
 
 /* ---------- Contact: book a call ----------

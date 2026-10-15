@@ -1,5 +1,8 @@
 import type { CSSProperties } from 'react'
-import { ArrowUpRight, MapPin } from '@/components/slab'
+import { Link } from 'react-router-dom'
+import { ArrowUpRight, MapPin, Clock, ClipboardText, ShieldCheck, Lightning, Handshake, CalendarCheck, FilePdf, SealCheck } from '@/components/slab'
+import type { Icon } from '@/components/slab'
+import { callHref, callIsExternal } from '@/lib/booking'
 import { profile } from '@/data/profile'
 
 /**
@@ -53,6 +56,18 @@ const CAPABILITIES: Capability[] = [
     title: 'Admin & customer support',
     marks: [GWS, ZOOM, SLACK, LOOM],
   },
+]
+
+/* Why a team gains from working with Ryan. Each point rests on something
+   real in his background, not on a promise he cannot show. */
+type Value = { title: string; body: string; Icon: Icon }
+
+const VALUES: Value[] = [
+  { title: 'Works your hours', body: 'Overlaps US Eastern to Pacific time and replies within one business day.', Icon: Clock },
+  { title: 'You always know what moved', body: 'Start and end-of-shift updates: done, blocked, and next.', Icon: ClipboardText },
+  { title: 'Careful with sensitive data', body: 'Seven years of compliance-driven work in finance, telecom, and healthcare.', Icon: ShieldCheck },
+  { title: 'Learns your tools fast', body: 'Picks up your CRM, trackers, and SOPs quickly, and flags what is new.', Icon: Lightning },
+  { title: 'Low-risk to start', body: 'Begin with a short trial task, then add hours as trust builds.', Icon: Handshake },
 ]
 
 export default function AboutGrid() {
@@ -139,16 +154,66 @@ export default function AboutGrid() {
           </div>
         </div>
 
-        <div className="agrid__portrait">
-          <img
-            src={profile.avatarSrc}
-            alt="Ryan Golfeo"
-            loading="eager"
-            decoding="async"
-            width={400}
-            height={400}
-          />
-        </div>
+        {/* Right: who you would be working with, small, then why it pays off. */}
+        <aside className="agrid__side" aria-label="Working with Ryan">
+          <div className="agrid__card">
+            <img
+              className="agrid__photo"
+              src="/portrait.webp"
+              alt="Ryan Golfeo at his desk"
+              width={420}
+              height={534}
+              loading="eager"
+              decoding="async"
+            />
+            <div className="agrid__card-copy">
+              <span className="agrid__card-name">
+                {profile.name}
+                <SealCheck size={16} weight="fill" aria-label={profile.verifiedLabel} />
+              </span>
+              <span className="agrid__card-role">Virtual assistant for lean US teams</span>
+              <span className="agrid__card-status">
+                <i aria-hidden="true" />
+                Open to part-time and contract work
+              </span>
+              <div className="agrid__card-actions">
+                <a
+                  className="agrid__btn agrid__btn--primary"
+                  href={callHref()}
+                  {...(callIsExternal() ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                >
+                  <CalendarCheck size={15} weight="bold" aria-hidden="true" />
+                  Book a call
+                </a>
+                <a className="agrid__btn" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                  <FilePdf size={15} weight="bold" aria-hidden="true" />
+                  Resume
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="agrid__values">
+            <h2 className="agrid__values-title">What you get working with me</h2>
+            <ul role="list">
+              {VALUES.map(({ title, body, Icon: ValueIcon }) => (
+                <li key={title} className="agrid__value">
+                  <span className="agrid__value-mark" aria-hidden="true">
+                    <ValueIcon size={18} weight="duotone" />
+                  </span>
+                  <span className="agrid__value-copy">
+                    <b>{title}</b>
+                    <span>{body}</span>
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <Link className="agrid__more" to="/track-record">
+              See where I have done the work
+              <ArrowUpRight size={14} weight="bold" aria-hidden="true" />
+            </Link>
+          </div>
+        </aside>
       </div>
     </section>
   )
