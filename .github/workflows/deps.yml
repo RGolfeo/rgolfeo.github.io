@@ -1,0 +1,31 @@
+name: Add npm packages
+
+# Run by hand: installs the listed packages on the chosen branch and commits
+# the updated package.json + package-lock.json back to it.
+on:
+  workflow_dispatch:
+    inputs:
+      packages:
+        description: Space-separated packages to add
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  add:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --no-audit --no-fund ${{ inputs.packages }}
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add package.json package-lock.json
+          git commit -m "Add ${{ inputs.packages }}" || echo "nothing to commit"
+          git push
